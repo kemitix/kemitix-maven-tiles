@@ -5,6 +5,7 @@
         <sevntu.version>1.24.1</sevntu.version>
         <ruleset.version>3.3.0</ruleset.version>
         <ruleset.level>5-complexity</ruleset.level>
+        <checkstyle.ruleset.location>net/kemitix/checkstyle-${ruleset.level}.xml</checkstyle.ruleset.location>
     </properties>
     <build>
         <plugins>
@@ -30,7 +31,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <configLocation>net/kemitix/checkstyle-${ruleset.level}.xml</configLocation>
+                    <configLocation>${checkstyle.ruleset.location}</configLocation>
                 </configuration>
                 <executions>
                     <execution>
