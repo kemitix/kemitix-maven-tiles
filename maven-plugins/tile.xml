@@ -35,7 +35,7 @@
                 <version>${maven-jxr-plugin.version}</version>
                 <executions>
                     <execution>
-                        <phase>package</phase>
+                        <phase>compile</phase>
                         <goals>
                             <goal>jxr</goal>
                         </goals>
