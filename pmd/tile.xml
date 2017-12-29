@@ -25,6 +25,17 @@
                     </execution>
                 </executions>
             </plugin><!-- maven-pmd-plugin -->
+            <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <version>${tiles-maven-plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>net.kemitix.tiles:maven-plugins-tile:${kemitix-tiles.version}</tile>
+                    </tiles>
+                </configuration>
+            </plugin><!-- tiles-maven-plugin -->
         </plugins>
     </build>
     <reporting>
