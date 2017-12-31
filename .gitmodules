@@ -1,4 +1,3 @@
 [submodule ".travis-support"]
 	path = .travis-support
-	url = git@github.com:kemitix/kemitix-travis-support.git
-	branch = master
+	url = https://github.com/kemitix/kemitix-travis-support.git
