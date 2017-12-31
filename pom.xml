@@ -16,6 +16,9 @@
 
     <packaging>pom</packaging>
 
+    <name>Kemitix Maven Tiles</name>
+    <description>Maven Tiles for preconfigured plugins</description>
+
     <modules>
         <module>tiles-parent</module>
         <module>checkstyle</module>
