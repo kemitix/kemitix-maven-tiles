@@ -1,43 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <parent>
-        <groupId>net.kemitix</groupId>
-        <artifactId>kemitix-parent</artifactId>
-        <version>5.0.3</version>
-        <relativePath/>
-    </parent>
-    <groupId>net.kemitix.tiles</groupId>
-    <artifactId>kemitix-maven-tiles</artifactId>
-    <version>0.1.0</version>
-
-    <packaging>pom</packaging>
-
-    <name>Kemitix Maven Tiles</name>
-    <description>Maven Tiles for preconfigured plugins</description>
-
-    <modules>
-        <module>tiles-parent</module>
-        <module>checkstyle</module>
-        <module>compiler</module>
-        <module>release</module>
-        <module>digraph</module>
-        <module>enforcer</module>
-        <module>coverage</module>
-        <module>testing</module>
-        <module>maven-plugins</module>
-        <module>pitest</module>
-        <module>huntbugs</module>
-        <module>pmd</module>
-        <module>all</module>
-    </modules>
-
+<project>
     <properties>
         <maven-javadoc-plugin.version>3.0.0-M1</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
+        <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
     </properties>
     <profiles>
@@ -77,12 +42,42 @@
 
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven-gpg-plugin.version}</version>
+                        <configuration>
+                            <passphrase>${gpg.passphrase}</passphrase>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin><!-- maven-gpg-plugin -->
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-deploy-plugin</artifactId>
                         <version>${maven-deploy-plugin.version}</version>
                     </plugin><!-- maven deploy-plugin -->
                 </plugins>
             </build>
+
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>sonatype-nexus-snapshots</id>
+                    <name>Sonatype Nexus Snapshots</name>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                </snapshotRepository>
+                <repository>
+                    <id>sonatype-nexus-staging</id>
+                    <name>Nexus Release Repository</name>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
         </profile>
     </profiles>
-
 </project>
