@@ -9,7 +9,7 @@ Maven Tiles for preconfigured plugins.
 <project>
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
-        <kemitix-tiles.version>0.1.1</kemitix-tiles.version>
+        <kemitix-tiles.version>0.2.0</kemitix-tiles.version>
     </properties>
     <build>
         <plugins>
