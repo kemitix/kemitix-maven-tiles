@@ -32,8 +32,13 @@ Maven Tiles for preconfigured plugins.
                          <tile>net.kemitix.tiles:digraph-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:testing-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:coverage-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:pitest-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:release-tile:${kemitix-tiles.version}</tile>
+
+                         <!-- Java 8 only - not compatible with Java 9+ -->
+                         <tile>net.kemitix.tiles:pmd-tile:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:pitest-tile:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:huntbugs-tile:${kemitix-tiles.version}</tile>
+
                    </tiles>
                 </configuration>
             </plugin>
@@ -56,6 +61,8 @@ If you want to override the version or configuration values of any of the plugin
 * `maven-failsafe-plugin.version`
 * `maven-jxr-plugin.version`
 * `java.version`
+* `require-java.version`
+* `require-maven.version`
 * `versions.version`
 * `coveralls-maven-plugin.version`
 
@@ -77,15 +84,15 @@ The [Maven JXR Plugin](http://maven.apache.org/jxr/maven-jxr-plugin/index.html) 
 
 Provides the `maven-enforcer-plugin`, performing the `display-info` and `enforce` goals during the `validate` phase.
 
-Required Maven Version is set by the `required-maven.version` property.
-
-Required Java Version is set by the `java.version` property.
+Required Maven Version is set by the `required-maven.version` property. Default is 3.5.0.
 
 ### Compiler Tile
 
 #### Maven Compiler Plugin
 
 The [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) compiles your sources.
+
+Compilation targets Java 9 by default. Set the `java.version` property to 1.8 to use Java 8.
 
 Ref: [compile:compile](https://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html)
 
@@ -101,13 +108,26 @@ This tile has been deprecated and replaced by the tile `net.kemitix.checkstyle:t
 
 ### Huntbugs Tile
 
+The plugin in this tile are only enabled when using a 1.8 JDK.
+
 The [Huntbugs Maven Plugin](https://github.com/amaembo/huntbugs) performs a static analysis of the compiled bytecode for common bug patterns during the `verify` phase.
 
+Trying to use the 0.0.11 version of the Huntbugs Maven Plugin with JDK 9 will result in the error:
+```
+[ERROR] Failed to execute goal one.util:huntbugs-maven-plugin:0.0.11:huntbugs (default-cli) on project foo:
+    Execution default-cli of goal one.util:huntbugs-maven-plugin:0.0.11:huntbugs failed:
+        A required class was missing while executing one.util:huntbugs-maven-plugin:0.0.11:huntbugs:
+            sun/misc/URLClassPath
+```
+
 ### PMD Tile
+
+The plugin in this tile are only enabled when using a 1.8 JDK.
 
 The [PMD Maven Plugin](https://maven.apache.org/plugins/maven-pmd-plugin/) performs the PMD static code analysis during the `verify` phase.
 
 Has a transitive dependency upon the `maven-plugins-tile` and includes it automatically.
+
 
 ### Digraph Tile
 
@@ -162,6 +182,8 @@ This runs the tests, creates the jacoco report from the tests then uploads the r
 
 ### Pitest Tile
 
+The plugins in this tile are only enabled when using a 1.8 JDK.
+
 #### Mutation Testing
 
 The [Pitest Maven Plugin](http://pitest.org/quickstart/maven/) perform mutation test coverage checks during the `verify` phase.
@@ -173,12 +195,6 @@ Set `pitest.skip` to avoid running the mutation test.
 Set `pitest.coverage` to a value between 0 and 1 to set the allowed ratio of uncovered code. i.e. 0 = 100% code coverage, 0.2 = 80% code coverage
 
 Set `pitest.mutation` to a value between 0 and 1 to set the allowed mutations to survive the test suite. i.e. 0 = 100% mutations caught, 0.2 = 80% mutations caught
-
-#### Highwheel Cyclic Analysis
-
-The [Highwheel Maven Plugin](https://github.com/hcoles/highwheel) detects and visualises class and package cyclic dependencies during the `verify` phase. It also reports on tests that appear to have been orphaned during refactoring.
-
-The generated report is created in `target/highwheel/`.
 
 ### Release Tile
 

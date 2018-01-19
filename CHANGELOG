@@ -1,0 +1,30 @@
+CHANGELOG
+=========
+
+0.3.0
+-----
+
+* [checkstyle] Removed to net.kemitix.checkstyle:tile https://github.com/kemitix/kemitix-checkstyle-ruleset/tree/master/tile
+* [compiler] Compiles to Java 9 by default
+* [enforcer] Required Maven 3.5.0 (for Java 9 compatibility)
+* [enforcer] Remove Java version requirement
+* [huntbugs] Only enabled when using JDK 8 (Java 9 incompatible)
+* [pitest] Only enabled when using JDK 8 (Java 9 incompatible)
+* [pmd] Only enabled when using JDK 8 (Java 9 incompatible)
+
+0.2.1
+------
+
+* [checkstyle] Downgrade checkstyle to 8.6
+
+0.2.0
+-----
+
+* [checkstyle] Upgrade checkstyle to 8.7
+* [checkstyle] Upgrade sevntu to 1.26.0
+* [checkstyle] Upgrade kemitix-checkstyle-ruleset to 3.4.0
+
+0.1.0
+-----
+
+* Initial release
