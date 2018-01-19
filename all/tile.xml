@@ -11,7 +11,6 @@
                         <tile>net.kemitix.tiles:maven-plugins-tile:0.3.0-SNAPSHOT</tile>
                         <tile>net.kemitix.tiles:enforcer-tile:0.3.0-SNAPSHOT</tile>
                         <tile>net.kemitix.tiles:compiler-tile:0.3.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:checkstyle-tile:0.3.0-SNAPSHOT</tile>
                         <tile>net.kemitix.tiles:huntbugs-tile:0.3.0-SNAPSHOT</tile>
                         <tile>net.kemitix.tiles:pmd-tile:0.3.0-SNAPSHOT</tile>
                         <tile>net.kemitix.tiles:digraph-tile:0.3.0-SNAPSHOT</tile>

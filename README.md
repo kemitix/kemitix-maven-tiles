@@ -27,7 +27,6 @@ Maven Tiles for preconfigured plugins.
                          <tile>net.kemitix.tiles:maven-plugins-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:enforcer-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:compiler-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:checkstyle-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:huntbugs-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:pmd-tile:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:digraph-tile:${kemitix-tiles.version}</tile>
@@ -98,14 +97,7 @@ Ref: [compile:compile](https://maven.apache.org/plugins/maven-compiler-plugin/co
 
 ### Checkstyle Tile
 
-The [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/) verifies the source code against a Checkstyle ruleset file.
-
-The default ruleset is the level `5-complexity` ruleset from [`kemitix-checkstyle-ruleset`](https://github.com/kemitix/kemitix-checkstyle-ruleset).
-
-To use another level within `kemitix-checkstyle-ruleset`, set the `ruleset.level` property. e.g. `4-tweaks`.
-
-To use a different checkstyle ruleset completely, set the `checkstyle.ruleset.location` property.
-
+This tile has been deprecated and replaced by the tile `net.kemitix.checkstyle:tile:$VERSION` from the [kemitix-checkstyle-ruleset](https://github.com/kemitix/kemitix-checkstyle-ruleset) project.
 
 ### Huntbugs Tile
 
