@@ -21,7 +21,6 @@
 
     <modules>
         <module>tiles-parent</module>
-        <module>checkstyle</module>
         <module>compiler</module>
         <module>release</module>
         <module>digraph</module>
