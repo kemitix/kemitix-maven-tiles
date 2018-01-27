@@ -5,6 +5,8 @@ Maven Tiles for preconfigured plugins.
 
 ### Usage
 
+For Java 9 and Maven 3.5.0+ applications:
+
 ```xml
 <project>
     <properties>
@@ -46,6 +48,8 @@ Maven Tiles for preconfigured plugins.
     </build>
 </project>
 ```
+
+Where Maven 3.3.9 is required, add the `enforcer-legacy-tile`.
 
 ### Properties
 
