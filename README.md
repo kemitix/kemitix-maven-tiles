@@ -51,6 +51,8 @@ For Java 9 and Maven 3.5.0+ applications:
 
 Where Maven 3.3.9 is required, add the `enforcer-legacy-tile`.
 
+Where Java 1.8 is required set the `java.version` property to `1.8`.
+
 ### Properties
 
 If you want to override the version or configuration values of any of the plugins configured by the tiles, you can set the following properties to the desired value.
