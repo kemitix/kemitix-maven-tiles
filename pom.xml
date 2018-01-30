@@ -20,7 +20,7 @@
     <description>Maven Tiles for preconfigured plugins</description>
 
     <modules>
-        <module>tiles-parent</module>
+        <module>parent</module>
         <module>compiler</module>
         <module>release</module>
         <module>digraph</module>
@@ -35,6 +35,7 @@
     </modules>
 
     <properties>
+        <maven.install.skip>true</maven.install.skip>
         <maven-javadoc-plugin.version>3.0.0-M1</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
         <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
