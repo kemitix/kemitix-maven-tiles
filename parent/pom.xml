@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
 
     <properties>
+        <maven.install.skip>false</maven.install.skip>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
     </properties>
 
