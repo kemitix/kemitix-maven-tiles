@@ -49,7 +49,7 @@ For Java 9 and Maven 3.5.0+ applications:
 </project>
 ```
 
-Where Maven 3.3.9 is required, add the `enforcer-legacy-tile`.
+Where Maven 3.3.9 is required, add the `enforcer-legacy`.
 
 Where Java 1.8 is required set the `java.version` property to `1.8`.
 
