@@ -20,7 +20,7 @@
     <description>Maven Tiles for preconfigured plugins</description>
 
     <modules>
-        <module>tiles-parent</module>
+        <module>parent</module>
         <module>compiler</module>
         <module>release</module>
         <module>digraph</module>

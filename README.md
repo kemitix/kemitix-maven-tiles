@@ -22,24 +22,23 @@ For Java 9 and Maven 3.5.0+ applications:
                 <extensions>true</extensions>
                 <configuration>
                     <tiles>
-                         <tile>net.kemitix.tiles:all-tiles:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
 
                          <!-- or -->
 
-                         <tile>net.kemitix.tiles:maven-plugins-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:enforcer-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:compiler-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:huntbugs-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:pmd-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:digraph-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:testing-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:coverage-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:release-tile:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:compiler:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:release:${kemitix-tiles.version}</tile>
 
                          <!-- Java 8 only - not compatible with Java 9+ -->
-                         <tile>net.kemitix.tiles:pmd-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:pitest-tile:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:huntbugs-tile:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
 
                    </tiles>
                 </configuration>

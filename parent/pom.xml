@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tiles-parent</artifactId>
+    <artifactId>parent</artifactId>
     <packaging>pom</packaging>
 
     <properties>

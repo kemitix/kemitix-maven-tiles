@@ -3,14 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>tiles-parent</artifactId>
+        <artifactId>parent</artifactId>
         <groupId>net.kemitix.tiles</groupId>
         <version>0.4.0-SNAPSHOT</version>
-        <relativePath>../tiles-parent/pom.xml</relativePath>
+        <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>digraph-tile</artifactId>
+    <artifactId>digraph</artifactId>
     <packaging>tile</packaging>
 
 </project>
