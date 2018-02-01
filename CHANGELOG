@@ -4,6 +4,7 @@ CHANGELOG
 0.4.0
 -----
 
+* Upgrade `maven-javadoc-plugin` to 3.0.0
 * Add tile `enforcer-legacy` to allow Maven 3.3.9+
 * Rename artifacts to remove redundant `-tile` suffixes
 * Prevent installation of the root pom

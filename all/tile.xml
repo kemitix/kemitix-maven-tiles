@@ -8,16 +8,16 @@
                 <extensions>true</extensions>
                 <configuration>
                     <tiles>
-                        <tile>net.kemitix.tiles:maven-plugins:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:enforcer:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:compiler:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:huntbugs:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:pmd:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:digraph:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:testing:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:coverage:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:pitest:0.4.0-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:release:0.4.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:maven-plugins:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:enforcer:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:compiler:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:huntbugs:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:pmd:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:digraph:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:testing:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:coverage:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:pitest:0.5.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:release:0.5.0-SNAPSHOT</tile>
                     </tiles>
                 </configuration>
             </plugin>
