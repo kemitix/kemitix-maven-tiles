@@ -13,6 +13,10 @@
     <name>Kemitix Maven Tiles</name>
     <description>Maven Tiles for preconfigured plugins</description>
 
+    <properties>
+        <maven.install.skip>true</maven.install.skip>
+    </properties>
+
     <modules>
         <module>parent</module>
         <module>compiler</module>

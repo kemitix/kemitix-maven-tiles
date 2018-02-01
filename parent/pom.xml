@@ -16,7 +16,6 @@
     <packaging>pom</packaging>
 
     <properties>
-        <maven.install.skip>false</maven.install.skip>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
         <maven-javadoc-plugin.version>3.0.0</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.0.1</maven-source-plugin.version>
