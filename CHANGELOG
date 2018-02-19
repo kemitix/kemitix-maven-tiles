@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+0.4.1
+-----
+
+* Fix non-installation of parent module
+* Don't install/deploy root pom
+* Add missing enforcer-legacy module entry to root pom
+
 0.4.0
 -----
 
