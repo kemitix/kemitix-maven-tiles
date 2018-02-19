@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.5.0
+-----
+
+* Upgrade pmd tile to use pmd 3.9.0
+
 0.4.1
 -----
 
