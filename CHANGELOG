@@ -4,8 +4,9 @@ CHANGELOG
 0.5.0
 -----
 
-* Upgrade pmd tile to use maven-pmd-plugin version 3.9.0
-* Allow overriding PMD version using property pmd.version (default 6.0.1)
+* pmd: Upgrade pmd tile to use maven-pmd-plugin version 3.9.0
+* pmd: Allow overriding PMD version using property pmd.version (default 6.0.1)
+* pmd: Enable incremental analysis
 
 0.4.1
 -----

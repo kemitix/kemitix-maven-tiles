@@ -41,6 +41,8 @@
                             <failOnViolation>true</failOnViolation>
                             <printFailingErrors>true</printFailingErrors>
                             <skipEmptyReport>false</skipEmptyReport>
+                            <analysisCache>true</analysisCache>
+                            <analysisCacheLocation>${project.build.directory}/pmd/pmd.cache</analysisCacheLocation>
                         </configuration>
                         <executions>
                             <execution>
