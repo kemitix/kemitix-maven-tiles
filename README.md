@@ -131,8 +131,9 @@ The plugin in this tile are only enabled when using a 1.8 JDK.
 
 The [PMD Maven Plugin](https://maven.apache.org/plugins/maven-pmd-plugin/) performs the PMD static code analysis during the `verify` phase.
 
-Has a transitive dependency upon the `maven-plugins-tile` and includes it automatically.
+Use PMD version 6.0.1. This can be overridden by setting the `pmd.version` property.
 
+Has a transitive dependency upon the `maven-plugins-tile` and includes it automatically.
 
 ### Digraph Tile
 
