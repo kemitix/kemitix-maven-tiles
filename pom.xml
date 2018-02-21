@@ -29,6 +29,7 @@
         <module>pitest</module>
         <module>huntbugs</module>
         <module>pmd</module>
+        <module>pmd-strict</module>
         <module>all</module>
     </modules>
 
