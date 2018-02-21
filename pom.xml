@@ -23,7 +23,6 @@
         <module>release</module>
         <module>digraph</module>
         <module>enforcer</module>
-        <module>enforcer-legacy</module>
         <module>coverage</module>
         <module>testing</module>
         <module>maven-plugins</module>
