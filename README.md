@@ -23,6 +23,7 @@ For Java 9 and Maven 3.5.0+ applications:
                 <configuration>
                     <tiles>
                          <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
 
                          <!-- or -->
 
@@ -30,13 +31,13 @@ For Java 9 and Maven 3.5.0+ applications:
                          <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:compiler:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:release:${kemitix-tiles.version}</tile>
 
                          <!-- Java 8 only - not compatible with Java 9+ -->
-                         <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
 
@@ -125,15 +126,28 @@ Trying to use the 0.0.11 version of the Huntbugs Maven Plugin with JDK 9 will re
             sun/misc/URLClassPath
 ```
 
-### PMD Tile
+### PMD Tiles
 
-The plugin in this tile are only enabled when using a 1.8 JDK.
+The [PMD Maven Plugin](https://maven.apache.org/plugins/maven-pmd-plugin/) performs the PMD static code analysis and copy-paste detection during the `verify` phase.
 
-The [PMD Maven Plugin](https://maven.apache.org/plugins/maven-pmd-plugin/) performs the PMD static code analysis during the `verify` phase.
+Uses PMD version `6.0.1`. This can be overridden by setting the `pmd.version` property.
 
-Use PMD version 6.0.1. This can be overridden by setting the `pmd.version` property.
+Include the `maven-plugins` tile to get source code cross-referencing in the error reports.
 
-Has a transitive dependency upon the `maven-plugins-tile` and includes it automatically.
+#### pmd
+
+Checks the source code against the rules in the [kemitix-pmd-ruleset](https://github.com/kemitix/kemitix-pmd-ruleset) 
+file [java.xml](https://github.com/kemitix/kemitix-pmd-ruleset/blob/master/src/main/resources/net/kemitix/pmd/java.xml).
+
+Creates HTML reports in `target/site/pmd.html` and `target/site/cpd.html`.
+
+#### pmd-strict
+
+Requires the `pmd` tile.
+
+Not included in the `all` tile.
+
+If there are any violations of the ruleset then the build will fail. 
 
 ### Digraph Tile
 
