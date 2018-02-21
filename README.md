@@ -91,6 +91,10 @@ Provides the `maven-enforcer-plugin`, performing the `display-info` and `enforce
 
 Required Maven Version is set by the `required-maven.version` property. Default is 3.5.0.
 
+```shell
+./mvnw validate -Drequired-maven.version=3.3.9
+```
+
 ### Compiler Tile
 
 #### Maven Compiler Plugin
