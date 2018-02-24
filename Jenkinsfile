@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Prepare') {
             steps {
                 checkout([
                     $class: 'GitSCM',
@@ -9,7 +9,11 @@ pipeline {
                     extensions: [[$class: 'CleanBeforeCheckout']],
                     userRemoteConfigs: [[credentialsId: 'github-kemitix', url: 'git@github.com:kemitix/kemitix-maven-tiles.git']]
                 ])
-                sh './mvnw clean install'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh './mvnw -B -U clean install'
             }
         }
         stage('Deploy') {
@@ -19,7 +23,7 @@ pipeline {
                 }
             }
             steps {
-                sh './mvnw -pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing -Dskip-Tests=true -P release -B deploy'
+                sh './mvnw -B -pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing -P release deploy'
             }
         }
     }
