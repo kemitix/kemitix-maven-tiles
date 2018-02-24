@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh './mvnw -Dskip-Tests=true -P release -B deploy'
+                sh './mvnw -pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing -Dskip-Tests=true -P release -B deploy'
             }
         }
     }
