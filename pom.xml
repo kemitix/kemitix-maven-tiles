@@ -6,7 +6,7 @@
 
     <groupId>net.kemitix.tiles</groupId>
     <artifactId>kemitix-maven-tiles</artifactId>
-    <version>0.4.1</version>
+    <version>0.5.0</version>
 
     <packaging>pom</packaging>
 
@@ -23,13 +23,13 @@
         <module>release</module>
         <module>digraph</module>
         <module>enforcer</module>
-        <module>enforcer-legacy</module>
         <module>coverage</module>
         <module>testing</module>
         <module>maven-plugins</module>
         <module>pitest</module>
         <module>huntbugs</module>
         <module>pmd</module>
+        <module>pmd-strict</module>
         <module>all</module>
     </modules>
 

@@ -5,12 +5,12 @@
     <parent>
         <artifactId>parent</artifactId>
         <groupId>net.kemitix.tiles</groupId>
-        <version>0.4.1</version>
+        <version>0.5.0</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>enforcer-legacy</artifactId>
+    <artifactId>pmd-strict</artifactId>
     <packaging>tile</packaging>
 
 </project>

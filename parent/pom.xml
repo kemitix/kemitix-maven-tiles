@@ -12,7 +12,7 @@
 
     <artifactId>parent</artifactId>
     <groupId>net.kemitix.tiles</groupId>
-    <version>0.4.1</version>
+    <version>0.5.0</version>
     <packaging>pom</packaging>
 
     <properties>
