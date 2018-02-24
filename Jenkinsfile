@@ -13,6 +13,11 @@ pipeline {
             }
         }
         stage('Deploy') {
+            when {
+                expression {
+                    env.GIT_BRANCH == 'master'
+                }
+            }
             steps {
                 sh './mvnw -pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing -Dskip-Tests=true -P release -B deploy'
             }
