@@ -7,14 +7,20 @@ pipeline {
                     $class: 'GitSCM',
                     branches: [[name: '**']],
                     extensions: [[$class: 'CleanBeforeCheckout']],
-                    userRemoteConfigs: [[credentialsId: 'github-kemitix', url: 'git@github.com:kemitix/kemitix-maven-tiles.git']]
+                    userRemoteConfigs: [[
+                        credentialsId: 'github-kemitix',
+                        url: 'git@github.com:kemitix/kemitix-maven-tiles.git']]
                 ])
             }
         }
+        def allModules = 'all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
         stage('Build') {
+            def cleanInstall(projects) {
+                sh "./mvnw -B -U -$projects clean install"
+            }
             steps {
-                sh './mvnw -B -U -pl release clean install'
-                sh './mvnw -B -U clean install'
+                cleanInstall release
+                cleanInstall $allModules
             }
         }
         stage('Deploy') {
@@ -24,7 +30,7 @@ pipeline {
                 }
             }
             steps {
-                sh './mvnw -B -U -pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing -P release deploy'
+                sh "./mvnw -B -U -pl $allModules -P release deploy"
             }
         }
     }
