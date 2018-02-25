@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    def allModules = 'all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
+    def cleanInstall(projects) {
+        sh "./mvnw -B -U -$projects clean install"
+    }
     stages {
         stage('Prepare') {
             steps {
@@ -12,10 +16,6 @@ pipeline {
                         url: 'git@github.com:kemitix/kemitix-maven-tiles.git']]
                 ])
             }
-        }
-        def allModules = 'all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
-        def cleanInstall(projects) {
-            sh "./mvnw -B -U -$projects clean install"
         }
         stage('Build') {
             steps {
