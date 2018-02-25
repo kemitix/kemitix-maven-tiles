@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                sh './mvnw -B -U -pl release clean install'
                 sh './mvnw -B -U clean install'
             }
         }
@@ -23,7 +24,7 @@ pipeline {
                 }
             }
             steps {
-                sh './mvnw -B -pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing -P release deploy'
+                sh './mvnw -B -U -pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing -P release deploy'
             }
         }
     }

@@ -6,7 +6,7 @@
 
     <groupId>net.kemitix.tiles</groupId>
     <artifactId>kemitix-maven-tiles</artifactId>
-    <version>0.5.1</version>
+    <version>0.5.2</version>
 
     <packaging>pom</packaging>
 
@@ -18,9 +18,9 @@
     </properties>
 
     <modules>
+        <module>release</module>
         <module>parent</module>
         <module>compiler</module>
-        <module>release</module>
         <module>digraph</module>
         <module>enforcer</module>
         <module>coverage</module>

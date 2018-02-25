@@ -11,7 +11,7 @@ For Java 9 and Maven 3.5.0+ applications:
 <project>
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
-        <kemitix-tiles.version>0.5.1</kemitix-tiles.version>
+        <kemitix-tiles.version>0.5.2</kemitix-tiles.version>
     </properties>
     <build>
         <plugins>
@@ -235,6 +235,12 @@ Runs its [jar-no-fork](https://maven.apache.org/plugins/maven-source-plugin/jar-
 The [Maven Javadoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) generates your html javadocs and bundles them into a jar file ready for deployment.
 
 Runs its [jar](https://maven.apache.org/plugins/maven-javadoc-plugin/jar-mojo.html) goal during the `verify` phase.
+
+#### Maven GPG Plugin
+
+The [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) digitally signs the generated artifacts ready for uploading to the Sonatype Nexus repository.
+
+Runs its [sign](https://maven.apache.org/plugins/maven-gpg-plugin/sign-mojo.html) goal during the `package` phase.
 
 #### Maven Deploy Plugin
 
