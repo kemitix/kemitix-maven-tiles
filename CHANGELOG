@@ -1,10 +1,12 @@
 CHANGELOG
 =========
 
-0.6.0
+0.5.1
 -----
 
-* 
+* Remove duplication between parent pom and release tile
+* Move distributionManagement from release tile to release and parent pom
+* Update id for repository
 
 0.5.0
 -----
