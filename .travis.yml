@@ -6,8 +6,8 @@ cache:
   - "$HOME/.m2"
 install: true
 script: "./mvnw -B -U -pl release clean install && ./mvnw -B -U clean install"
-deploy:
-  provider: script
-  script: sh .travis-support/deploy.sh
-  on:
-    branch: master
+#deploy:
+#  provider: script
+#  script: sh .travis-support/deploy.sh
+#  on:
+#    branch: master
