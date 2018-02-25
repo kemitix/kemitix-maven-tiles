@@ -14,10 +14,10 @@ pipeline {
             }
         }
         def allModules = 'all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
+        def cleanInstall(projects) {
+            sh "./mvnw -B -U -$projects clean install"
+        }
         stage('Build') {
-            def cleanInstall(projects) {
-                sh "./mvnw -B -U -$projects clean install"
-            }
             steps {
                 cleanInstall release
                 cleanInstall $allModules
