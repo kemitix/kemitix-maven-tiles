@@ -1,36 +1,42 @@
+// all modules, excluding the root module
+def allModules = '-pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
+
+def maven(goals, modules, profiles) {
+    sh "./mvnw -B -U $profiles $modules $goals"
+}
+
+def build(modules) {
+    maven("clean install", modules, "")
+}
+
+def release(modules) {
+    maven("deploy", modules, "-P release")
+}
+
+def isBranch(branch) {
+    return env.GIT_BRANCH == branch
+}
+
 pipeline {
     agent any
-    def allModules = 'all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
-    def cleanInstall(projects) {
-        sh "./mvnw -B -U -$projects clean install"
-    }
     stages {
         stage('Prepare') {
             steps {
-                checkout([
-                    $class: 'GitSCM',
-                    branches: [[name: '**']],
-                    extensions: [[$class: 'CleanBeforeCheckout']],
-                    userRemoteConfigs: [[
-                        credentialsId: 'github-kemitix',
-                        url: 'git@github.com:kemitix/kemitix-maven-tiles.git']]
-                ])
+                git url: 'git@github.com:kemitix/kemitix-maven-tiles.git',
+                        branch: '**',
+                        credentialsId: 'github-kemitix'
             }
         }
         stage('Build') {
             steps {
-                cleanInstall release
-                cleanInstall $allModules
+                build "release"
+                build allModules
             }
         }
         stage('Deploy') {
-            when {
-                expression {
-                    env.GIT_BRANCH == 'master'
-                }
-            }
+            when { expression { isBranch 'master' } }
             steps {
-                sh "./mvnw -B -U -pl $allModules -P release deploy"
+                release(allModules)
             }
         }
     }
