@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                build "release"
+                build "-pl release"
                 build allModules
             }
         }
