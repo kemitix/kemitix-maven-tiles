@@ -69,6 +69,7 @@
                         <version>${maven-deploy-plugin.version}</version>
                     </plugin><!-- maven deploy-plugin -->
                 </plugins>
+
             </build>
 
             <distributionManagement>

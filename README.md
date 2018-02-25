@@ -236,6 +236,12 @@ The [Maven Javadoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin
 
 Runs its [jar](https://maven.apache.org/plugins/maven-javadoc-plugin/jar-mojo.html) goal during the `verify` phase.
 
+#### Maven GPG Plugin
+
+The [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) digitally signs the generated artifacts ready for uploading to the Sonatype Nexus repository.
+
+Runs its [sign](https://maven.apache.org/plugins/maven-gpg-plugin/sign-mojo.html) goal during the `package` phase.
+
 #### Maven Deploy Plugin
 
 The [Maven Deploy Plugin](https://maven.apache.org/plugins/maven-deploy-plugin/) uploads your artifacts to a remote repository.
