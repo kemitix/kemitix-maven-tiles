@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-if test $# != 2
+if test $# != 1
 then
-    echo "current and next version missing"
+    echo "next version missing"
     exit
 fi
 
-CURRENT=$1
-NEXT=$2
+CURRENT=`grep '<version>' pom.xml | sed 's/.*>\(.*\)<.*/\1/'`
+NEXT=$1
 
 echo Updating version from $CURRENT to $NEXT
 
