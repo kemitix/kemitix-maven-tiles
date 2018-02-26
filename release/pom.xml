@@ -2,12 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kemitix-parent</artifactId>
+        <groupId>net.kemitix</groupId>
+        <version>5.0.3</version>
+        <relativePath/>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.kemitix.tiles</groupId>
     <artifactId>release</artifactId>
     <version>0.5.2</version>
     <packaging>tile</packaging>
+
+    <name>Kemitix Maven Tiles - Release</name>
+    <description>Maven Tiles for Releasing artifacts</description>
+    <scm>
+        <url>https://github.com/kemitix/kemitix-maven-tiles/release</url>
+        <connection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</connection>
+        <developerConnection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</developerConnection>
+    </scm>
+    <url>https://github.com/kemitix/kemitix-maven-tiles/release</url>
+    <inceptionYear>2017</inceptionYear>
 
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
