@@ -1,18 +1,14 @@
 // all modules, excluding the root module
-def allModules = '-pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
+def allModules = 'all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
 
-def maven(goals, modules, profiles) {
+def maven(goals, modules = "", profiles = "") {
     withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
-        sh "mvn -U $profiles $modules $goals"
+        sh "mvn -U -P $profiles -pl $modules $goals"
     }
 }
 
 def build(modules) {
-    maven("clean install", modules, "")
-}
-
-def release(modules) {
-    maven("deploy", modules, "-P release")
+    maven("clean install", modules)
 }
 
 def isBranch(branch) {
@@ -31,14 +27,19 @@ pipeline {
         }
         stage('Build') {
             steps {
-                build "-pl release"
+                build "release"
                 build allModules
+            }
+        }
+        stage('Sign') {
+            steps {
+                maven("gpg:sign", allModules, "release")
             }
         }
         stage('Deploy') {
             when { expression { isBranch 'master' } }
             steps {
-                release(allModules)
+                maven("deploy", allModules, "release")
             }
         }
     }
