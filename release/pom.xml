@@ -11,6 +11,7 @@
 
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
     </properties>
 
     <build>
@@ -21,6 +22,17 @@
                 <version>${tiles-maven-plugin.version}</version>
                 <extensions>true</extensions>
             </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>${nexus-staging-maven-plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <skipStaging>false</skipStaging>
+                </configuration>
+            </plugin><!-- nexus-staging-maven-plugin -->
         </plugins>
     </build>
     <distributionManagement>
