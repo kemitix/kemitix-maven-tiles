@@ -2,6 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kemitix-parent</artifactId>
+        <groupId>net.kemitix</groupId>
+        <version>5.0.3</version>
+        <relativePath/>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>net.kemitix.tiles</groupId>
@@ -9,8 +15,19 @@
     <version>0.6.0-SNAPSHOT</version>
     <packaging>tile</packaging>
 
+    <name>Kemitix Maven Tiles - Release</name>
+    <description>Maven Tiles for Releasing artifacts</description>
+    <scm>
+        <url>https://github.com/kemitix/kemitix-maven-tiles/release</url>
+        <connection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</connection>
+        <developerConnection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</developerConnection>
+    </scm>
+    <url>https://github.com/kemitix/kemitix-maven-tiles/release</url>
+    <inceptionYear>2017</inceptionYear>
+
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
+        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
     </properties>
 
     <build>
@@ -21,6 +38,39 @@
                 <version>${tiles-maven-plugin.version}</version>
                 <extensions>true</extensions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>${maven-gpg-plugin.version}</version>
+                <configuration>
+                    <passphrase>${gpg.passphrase}</passphrase>
+                    <gpgArguments>
+                        <arg>--batch</arg>
+                        <arg>--pinentry-mode</arg>
+                        <arg>loopback</arg>
+                    </gpgArguments>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin><!-- maven-gpg-plugin -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>${nexus-staging-maven-plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <skipStaging>false</skipStaging>
+                </configuration>
+            </plugin><!-- nexus-staging-maven-plugin -->
         </plugins>
     </build>
     <distributionManagement>
