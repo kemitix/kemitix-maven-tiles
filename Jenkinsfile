@@ -1,9 +1,12 @@
+final String gitRepoUrl = 'git@github.com:kemitix/kemitix-maven-tiles.git'
+final String mvn = "mvn --batch-mode --update-snapshots"
+
 pipeline {
     agent any
     stages {
         stage('Prepare') {
             steps {
-                git url: 'git@github.com:kemitix/kemitix-maven-tiles.git',
+                git url: gitRepoUrl,
                         branch: '**',
                         credentialsId: 'github-kemitix'
             }
@@ -11,8 +14,8 @@ pipeline {
         stage('Build') {
             steps {
                 withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
-                    sh "mvn --batch-mode --update-snapshots release clean install"
-                    sh "mvn --batch-mode --update-snapshots clean install"
+                    sh "${mvn} clean install --projects release"
+                    sh "${mvn} clean install"
                 }
             }
         }
@@ -20,7 +23,7 @@ pipeline {
             when { expression { (env.GIT_BRANCH == 'master') } }
             steps {
                 withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
-                    sh "mvn --batch-mode --update-snapshots --activate-profiles release deploy"
+                    sh "${mvn} deploy --activate-profiles release"
                 }
             }
         }
