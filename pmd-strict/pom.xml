@@ -13,4 +13,6 @@
     <artifactId>pmd-strict</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-pmd-strict</name>
+    <description>strict maven-pmd-plugin for kemitix-maven-tiles</description>
 </project>

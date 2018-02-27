@@ -13,4 +13,6 @@
     <artifactId>digraph</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-digraph</name>
+    <description>digraph-maven-plugin for kemitix-maven-tiles</description>
 </project>

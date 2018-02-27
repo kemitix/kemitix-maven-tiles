@@ -13,4 +13,6 @@
     <artifactId>maven-plugins</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-maven-plugins</name>
+    <description>maven-*-plugin for kemitix-maven-tiles</description>
 </project>

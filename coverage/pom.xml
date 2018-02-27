@@ -13,4 +13,6 @@
     <artifactId>coverage</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-coverage</name>
+    <description>maven-jacoco-plugin for kemitix-maven-tiles</description>
 </project>

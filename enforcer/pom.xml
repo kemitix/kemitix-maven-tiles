@@ -13,4 +13,6 @@
     <artifactId>enforcer</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-enforcer</name>
+    <description>maven-enforcer-plugin for kemitix-maven-tiles</description>
 </project>

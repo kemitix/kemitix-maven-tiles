@@ -13,4 +13,6 @@
     <artifactId>all</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-all</name>
+    <description>(Almost) All kemitix-maven-tiles</description>
 </project>

@@ -13,4 +13,6 @@
     <artifactId>pitest</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-pitest</name>
+    <description>{pitest,highwheel}-maven plugins for kemitix-maven-tiles</description>
 </project>
