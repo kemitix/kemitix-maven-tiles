@@ -1,6 +1,19 @@
 CHANGELOG
 =========
 
+0.5.3
+-----
+
+* Deploy the missing pmd-strict tile
+* Remove travis-support (leaves normal build testing)
+* Remove enforcer-legacy reference from README
+
+0.5.2
+-----
+
+* Improved Jenkinsfile
+* Add missing pom tags: name, description, scm
+
 0.5.1
 -----
 
