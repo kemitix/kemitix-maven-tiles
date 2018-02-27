@@ -10,7 +10,7 @@
 
     <packaging>pom</packaging>
 
-    <name>Kemitix Maven Tiles</name>
+    <name>kemitix-maven-tiles</name>
     <description>Maven Tiles for preconfigured plugins</description>
 
     <properties>

@@ -15,15 +15,8 @@
     <version>0.5.3</version>
     <packaging>tile</packaging>
 
-    <name>Kemitix Maven Tiles - Release</name>
-    <description>Maven Tiles for Releasing artifacts</description>
-    <scm>
-        <url>https://github.com/kemitix/kemitix-maven-tiles/release</url>
-        <connection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</connection>
-        <developerConnection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</developerConnection>
-    </scm>
-    <url>https://github.com/kemitix/kemitix-maven-tiles/release</url>
-    <inceptionYear>2017</inceptionYear>
+    <name>kemitix-maven-tiles-release</name>
+    <description>maven-release-plugin for kemitix-maven-tiles</description>
 
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>

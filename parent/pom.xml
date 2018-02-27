@@ -15,8 +15,8 @@
     <version>0.5.3</version>
     <packaging>pom</packaging>
 
-    <name>Kemitix Maven Tiles</name>
-    <description>Maven Tiles for preconfigured plugins</description>
+    <name>kemitix-maven-tiles-parent</name>
+    <description>Parent POM for kemitix-maven-tiles</description>
     <scm>
         <url>https://github.com/kemitix/kemitix-maven-tiles</url>
         <connection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</connection>

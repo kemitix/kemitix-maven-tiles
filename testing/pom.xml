@@ -13,4 +13,6 @@
     <artifactId>testing</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-testing</name>
+    <description>maven-{surefile,failsafe}-plugin for kemitix-maven-tiles</description>
 </project>

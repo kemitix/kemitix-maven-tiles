@@ -13,4 +13,6 @@
     <artifactId>huntbugs</artifactId>
     <packaging>tile</packaging>
 
+    <name>kemitix-maven-tiles-huntbugs</name>
+    <description>huntbugs-maven-plugin for kemitix-maven-tiles</description>
 </project>
