@@ -1,24 +1,3 @@
-// all modules, excluding the root module
-def allModules = '-pl all,compiler,coverage,digraph,enforcer,huntbugs,maven-plugins,parent,pitest,pmd,release,testing'
-
-def maven(goals, modules, profiles) {
-    withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
-        sh "mvn -U $profiles $modules $goals"
-    }
-}
-
-def build(modules) {
-    maven("clean install", modules, "")
-}
-
-def release(modules) {
-    maven("deploy", modules, "-P release")
-}
-
-def isBranch(branch) {
-    return env.GIT_BRANCH == branch
-}
-
 pipeline {
     agent any
     stages {
@@ -31,14 +10,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                build "-pl release"
-                build allModules
+                withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
+                    sh "mvn --batch --update-snapshots release clean install"
+                    sh "mvn --batch --update-snapshots clean install"
+                }
             }
         }
         stage('Deploy') {
-            when { expression { isBranch 'master' } }
+            when { expression { (env.GIT_BRANCH == 'master') } }
             steps {
-                release(allModules)
+                withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
+                    sh "mvn --batch --update-snapshots --activate-profiles release deploy"
+                }
             }
         }
     }
