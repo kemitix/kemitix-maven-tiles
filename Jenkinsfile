@@ -11,8 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
-                    sh "mvn --batch --update-snapshots release clean install"
-                    sh "mvn --batch --update-snapshots clean install"
+                    sh "mvn --batch-mode --update-snapshots release clean install"
+                    sh "mvn --batch-mode --update-snapshots clean install"
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
             when { expression { (env.GIT_BRANCH == 'master') } }
             steps {
                 withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
-                    sh "mvn --batch --update-snapshots --activate-profiles release deploy"
+                    sh "mvn --batch-mode --update-snapshots --activate-profiles release deploy"
                 }
             }
         }
