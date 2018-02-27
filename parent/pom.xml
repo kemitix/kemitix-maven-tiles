@@ -17,13 +17,6 @@
 
     <name>kemitix-maven-tiles-parent</name>
     <description>Parent POM for kemitix-maven-tiles</description>
-    <scm>
-        <url>https://github.com/kemitix/kemitix-maven-tiles</url>
-        <connection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</connection>
-        <developerConnection>scm:git:git@github.com:kemitix/kemitix-maven-tiles.git</developerConnection>
-    </scm>
-    <url>https://github.com/kemitix/kemitix-maven-tiles</url>
-    <inceptionYear>2017</inceptionYear>
 
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
