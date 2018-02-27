@@ -12,7 +12,7 @@
 
     <groupId>net.kemitix.tiles</groupId>
     <artifactId>release</artifactId>
-    <version>0.5.2</version>
+    <version>0.5.3</version>
     <packaging>tile</packaging>
 
     <name>Kemitix Maven Tiles - Release</name>

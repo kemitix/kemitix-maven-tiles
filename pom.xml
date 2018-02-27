@@ -6,7 +6,7 @@
 
     <groupId>net.kemitix.tiles</groupId>
     <artifactId>kemitix-maven-tiles</artifactId>
-    <version>0.5.2</version>
+    <version>0.5.3</version>
 
     <packaging>pom</packaging>
 
