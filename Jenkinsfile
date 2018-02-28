@@ -6,15 +6,12 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                git url: gitRepoUrl,
-                        branch: '**',
-                        credentialsId: 'github-kemitix'
+                git url: gitRepoUrl, branch: '**', credentialsId: 'github-kemitix'
             }
         }
         stage('Build') {
             steps {
                 withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
-                    sh "${mvn} clean install --projects release"
                     sh "${mvn} clean install"
                 }
             }

@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>kemitix.net</groupId>
+        <groupId>net.kemitix</groupId>
         <artifactId>kemitix-parent</artifactId>
-        <version>5.0.3</version>
+        <version>5.1.0</version>
         <relativePath/>
     </parent>
 
@@ -29,7 +29,6 @@
     <inceptionYear>2017</inceptionYear>
 
     <modules>
-        <module>release</module>
         <module>parent</module>
         <module>compiler</module>
         <module>digraph</module>

@@ -17,7 +17,6 @@
                         <tile>net.kemitix.tiles:testing:0.5.3</tile>
                         <tile>net.kemitix.tiles:coverage:0.5.3</tile>
                         <tile>net.kemitix.tiles:pitest:0.5.3</tile>
-                        <tile>net.kemitix.tiles:release:0.5.3</tile>
                     </tiles>
                 </configuration>
             </plugin>
