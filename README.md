@@ -35,7 +35,6 @@ For Java 9 and Maven 3.5.0+ applications:
                          <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:release:${kemitix-tiles.version}</tile>
 
                          <!-- Java 8 only - not compatible with Java 9+ -->
                          <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
@@ -219,10 +218,6 @@ Set `pitest.skip` to avoid running the mutation test.
 Set `pitest.coverage` to a value between 0 and 1 to set the allowed ratio of uncovered code. i.e. 0 = 100% code coverage, 0.2 = 80% code coverage
 
 Set `pitest.mutation` to a value between 0 and 1 to set the allowed mutations to survive the test suite. i.e. 0 = 100% mutations caught, 0.2 = 80% mutations caught
-
-### Release Tile
-
-The plugins in this Tile are only activated when the `release` profile is enabled.
 
 #### Maven Source Plugin
 

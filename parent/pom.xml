@@ -5,7 +5,7 @@
     <parent>
         <artifactId>kemitix-parent</artifactId>
         <groupId>net.kemitix</groupId>
-        <version>5.0.3</version>
+        <version>5.1.0</version>
         <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -29,19 +29,7 @@
                 <artifactId>tiles-maven-plugin</artifactId>
                 <version>${tiles-maven-plugin.version}</version>
                 <extensions>true</extensions>
-                <configuration>
-                    <tiles>
-                        <tile>net.kemitix.tiles:release:${project.version}</tile>
-                    </tiles>
-                </configuration>
             </plugin>
         </plugins>
     </build>
-
-    <distributionManagement>
-        <repository>
-            <id>sonatype-nexus</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 </project>
