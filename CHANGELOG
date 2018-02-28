@@ -1,6 +1,12 @@
 CHANGELOG
 =========
 
+0.6.0
+-----
+
+* Upgrade to `kemitix-parent` 5.1.0
+* Remove `release` tile; replaced by upgraded parent
+
 0.5.3
 -----
 
