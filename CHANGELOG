@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.6.1
+-----
+
+* Downgrade `maven-surefire-plugin` and `maven-failsfe-plugin` to 2.20
+
 0.6.0
 -----
 
