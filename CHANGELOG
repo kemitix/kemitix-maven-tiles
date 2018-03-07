@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.7.0
+-----
+
+* Upgrade `kemitix-pmd-ruleset` to 0.2.0
+
 0.6.1
 -----
 
