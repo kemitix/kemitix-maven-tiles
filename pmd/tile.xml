@@ -2,7 +2,7 @@
     <properties>
         <maven-pmd-plugin.version>3.9.0</maven-pmd-plugin.version>
         <pmd.version>6.0.1</pmd.version>
-        <kemitix-pmd-ruleset.version>0.1.0</kemitix-pmd-ruleset.version>
+        <kemitix-pmd-ruleset.version>0.2.1</kemitix-pmd-ruleset.version>
     </properties>
     <build>
         <plugins>
