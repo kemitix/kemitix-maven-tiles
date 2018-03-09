@@ -29,16 +29,16 @@ pipeline {
                 pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
             }
         }
-        stage('Build Java 8') {
+        stage('Build Java 9') {
             steps {
-                withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
+                withMaven(maven: 'maven 3.5.2', jdk: 'JDK 9') {
                     sh "${mvn} clean install"
                 }
             }
         }
-        stage('Build Java 9') {
+        stage('Build Java 8') {
             steps {
-                withMaven(maven: 'maven 3.5.2', jdk: 'JDK 9') {
+                withMaven(maven: 'maven 3.5.2', jdk: 'JDK 1.8') {
                     sh "${mvn} clean install"
                 }
             }
