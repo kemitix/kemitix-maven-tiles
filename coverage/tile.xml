@@ -2,7 +2,6 @@
     <properties>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jacoco-maven-plugin.version>0.7.9</jacoco-maven-plugin.version>
-        <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
         <jacoco-class-line-covered-ratio>1</jacoco-class-line-covered-ratio>
         <jacoco-class-instruction-covered-ratio>1</jacoco-class-instruction-covered-ratio>
         <jacoco-class-missed-count-maximum>0</jacoco-class-missed-count-maximum>
@@ -66,11 +65,6 @@
                     </rules>
                 </configuration>
             </plugin><!-- jacoco-maven-plugin -->
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <version>${coveralls-maven-plugin.version}</version>
-            </plugin><!-- coveralls-maven-plugin -->
         </plugins>
     </build>
     <reporting>
