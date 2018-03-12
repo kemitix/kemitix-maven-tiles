@@ -7,7 +7,7 @@
         <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
         <maven-site-plugin.version>3.6</maven-site-plugin.version>
         <maven-jxr-plugin.version>2.5</maven-jxr-plugin.version>
-        <versions.version>2.4</versions.version>
+        <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
     </properties>
     <build>
         <plugins>
@@ -61,7 +61,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
-                <version>${versions.version}</version>
+                <version>${versions-maven-plugin.version}</version>
                 <reportSets>
                     <reportSet>
                         <reports>

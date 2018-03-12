@@ -68,7 +68,7 @@ If you want to override the version or configuration values of any of the plugin
 * `java.version`
 * `require-java.version`
 * `require-maven.version`
-* `versions.version`
+* `versions-maven-plugin.version`
 * `coveralls-maven-plugin.version`
 
 ### Maven Plugins Tile
