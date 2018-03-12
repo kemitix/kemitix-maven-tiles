@@ -1,6 +1,18 @@
 CHANGELOG
 =========
 
+0.8.0
+-----
+
+* testing: upgrade `maven-{surefire,failsafe}-plugin` to 2.21.0
+* pmd: upgrade `pmd` to 6.1.0
+* pitest: upgrade `pitest-maven-plugin` to 1.3.2
+* maven-plugins: upgrade `maven-site-plugin` to 3.7
+* coverage: upgrade `jacoco-maven-plugin` to 0.8.0
+* coverage: remove `coveralls-maven-plugin`
+* maven-tiles: Upgrade `versions-maven-plugin` to 2.5
+* enforcer: upgrade `maven-enforcer-plugin` to 3.0.0-M1 for Java 9 compatibility
+
 0.7.1
 -----
 

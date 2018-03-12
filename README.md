@@ -11,7 +11,7 @@ For Java 9 and Maven 3.5.0+ applications:
 <project>
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
-        <kemitix-tiles.version>0.7.1</kemitix-tiles.version>
+        <kemitix-tiles.version>0.8.0</kemitix-tiles.version>
     </properties>
     <build>
         <plugins>
@@ -68,8 +68,9 @@ If you want to override the version or configuration values of any of the plugin
 * `java.version`
 * `require-java.version`
 * `require-maven.version`
-* `versions.version`
-* `coveralls-maven-plugin.version`
+* `versions-maven-plugin.version`
+* `pitest-maven-plugin.version`
+* `highwheel-maven-plugin.version`
 
 ### Maven Plugins Tile
 
@@ -190,18 +191,6 @@ Classes with names that end in the following are excluded from these limits:
 * `Application`
 * `Configuration`
 * `Immutable`
-
-#### Coveralls
-
-The [Coveralls Maven Plugin](https://github.com/trautonen/coveralls-maven-plugin) publishes coverage data to coveralls.io.
-
-The plugin is not configured to run automatically. It must be initiated manually, and requires the `release` profile to be enabled:
-
-```shell
-mvn -P release test jacoco:report coveralls:report
-```
-
-This runs the tests, creates the jacoco report from the tests then uploads the results to http://coveralls.io.
 
 ### Pitest Tile
 
