@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+0.8.1
+-----
+
+* maven-plugins: update missed renamed property use
+
 0.8.0
 -----
 
@@ -10,7 +15,7 @@ CHANGELOG
 * maven-plugins: upgrade `maven-site-plugin` to 3.7
 * coverage: upgrade `jacoco-maven-plugin` to 0.8.0
 * coverage: remove `coveralls-maven-plugin`
-* maven-tiles: Upgrade `versions-maven-plugin` to 2.5
+* maven-plugins: Upgrade `versions-maven-plugin` to 2.5
 * enforcer: upgrade `maven-enforcer-plugin` to 3.0.0-M1 for Java 9 compatibility
 
 0.7.1
