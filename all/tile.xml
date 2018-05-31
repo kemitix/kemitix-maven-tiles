@@ -8,15 +8,15 @@
                 <extensions>true</extensions>
                 <configuration>
                     <tiles>
-                        <tile>net.kemitix.tiles:maven-plugins:0.8.1</tile>
-                        <tile>net.kemitix.tiles:enforcer:0.8.1</tile>
-                        <tile>net.kemitix.tiles:compiler:0.8.1</tile>
-                        <tile>net.kemitix.tiles:huntbugs:0.8.1</tile>
-                        <tile>net.kemitix.tiles:pmd:0.8.1</tile>
-                        <tile>net.kemitix.tiles:digraph:0.8.1</tile>
-                        <tile>net.kemitix.tiles:testing:0.8.1</tile>
-                        <tile>net.kemitix.tiles:coverage:0.8.1</tile>
-                        <tile>net.kemitix.tiles:pitest:0.8.1</tile>
+                        <tile>net.kemitix.tiles:maven-plugins:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:enforcer:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:compiler:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:huntbugs:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:pmd:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:digraph:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:testing:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:coverage:0.9.0-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:pitest:0.9.0-SNAPSHOT</tile>
                     </tiles>
                 </configuration>
             </plugin>
