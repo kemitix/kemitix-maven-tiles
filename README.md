@@ -11,7 +11,7 @@ For Java 9 and Maven 3.5.0+ applications:
 <project>
     <properties>
         <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
-        <kemitix-tiles.version>0.8.1</kemitix-tiles.version>
+        <kemitix-tiles.version>DEV-SNAPSHOT</kemitix-tiles.version>
     </properties>
     <build>
         <plugins>
