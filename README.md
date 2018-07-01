@@ -10,7 +10,7 @@ For Java 9 and Maven 3.5.0+ applications:
 ```xml
 <project>
     <properties>
-        <tiles-maven-plugin.version>2.10</tiles-maven-plugin.version>
+        <tiles-maven-plugin.version>2.11</tiles-maven-plugin.version>
         <kemitix-tiles.version>DEV-SNAPSHOT</kemitix-tiles.version>
     </properties>
     <build>
