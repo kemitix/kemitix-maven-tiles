@@ -3,6 +3,9 @@ KEMITIX-MAVEN-TILES
 
 Maven Tiles for preconfigured plugins.
 
+[![Sonatype Nexus (Releases)](https://img.shields.io/nexus/r/https/oss.sonatype.org/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge)](https://oss.sonatype.org/content/repositories/releases/net/kemitix/tiles/kemitix-maven-tiles/)
+[![Maven Central](https://img.shields.io/maven-central/v/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge)](https://search.maven.org/#search|ga|1|g%3A"net.kemitix.tiles"%20AND%20a%3A"kemitix-maven-tiles")
+
 ### Usage
 
 For Java 9 and Maven 3.5.0+ applications:
