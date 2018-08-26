@@ -1,7 +1,7 @@
 <project>
     <properties>
         <highwheel-maven-plugin.version>1.3</highwheel-maven-plugin.version>
-        <pitest-maven-plugin.version>1.4.0</pitest-maven-plugin.version>
+        <pitest-maven-plugin.version>1.4.2</pitest-maven-plugin.version>
         <pitest.coverage>0</pitest.coverage>
         <pitest.mutation>0</pitest.mutation>
         <pitest.skip>false</pitest.skip>
