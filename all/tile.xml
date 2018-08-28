@@ -4,19 +4,19 @@
             <plugin>
                 <groupId>io.repaint.maven</groupId>
                 <artifactId>tiles-maven-plugin</artifactId>
-                <version>${tiles-maven-plugin.version}</version>
+                <version>@tiles-maven-plugin.version@</version>
                 <extensions>true</extensions>
                 <configuration>
                     <tiles>
-                        <tile>net.kemitix.tiles:maven-plugins:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:enforcer:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:compiler:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:huntbugs:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:pmd:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:digraph:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:testing:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:coverage:DEV-SNAPSHOT</tile>
-                        <tile>net.kemitix.tiles:pitest:DEV-SNAPSHOT</tile>
+                        <tile>net.kemitix.tiles:maven-plugins:@project.version@</tile>
+                        <tile>net.kemitix.tiles:enforcer:@project.version@</tile>
+                        <tile>net.kemitix.tiles:compiler:@project.version@</tile>
+                        <tile>net.kemitix.tiles:huntbugs:@project.version@</tile>
+                        <tile>net.kemitix.tiles:pmd:@project.version@</tile>
+                        <tile>net.kemitix.tiles:digraph:@project.version@</tile>
+                        <tile>net.kemitix.tiles:testing:@project.version@</tile>
+                        <tile>net.kemitix.tiles:coverage:@project.version@</tile>
+                        <tile>net.kemitix.tiles:pitest:@project.version@</tile>
                     </tiles>
                 </configuration>
             </plugin>

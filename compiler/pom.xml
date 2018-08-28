@@ -15,4 +15,23 @@
 
     <name>kemitix-maven-tiles-compiler</name>
     <description>maven-compiler-plugin for kemitix-maven-tiles</description>
+
+    <properties>
+        <java.compiler.version>1.8</java.compiler.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>

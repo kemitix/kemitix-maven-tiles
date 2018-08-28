@@ -29,6 +29,9 @@
                 <artifactId>tiles-maven-plugin</artifactId>
                 <version>${tiles-maven-plugin.version}</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <filtering>true</filtering>
+                </configuration>
             </plugin>
         </plugins>
     </build>

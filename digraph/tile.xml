@@ -1,7 +1,7 @@
 <project>
     <properties>
-        <digraph-dependency.version>0.9.0</digraph-dependency.version>
-        <digraph-dependency.basePackage>net.kemitix</digraph-dependency.basePackage>
+        <digraph-dependency.version>@digraph-dependency.version@</digraph-dependency.version>
+        <digraph-dependency.basePackage>@digraph-dependency.basePackage@</digraph-dependency.basePackage>
     </properties>
     <build>
         <plugins>

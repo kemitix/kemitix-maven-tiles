@@ -15,4 +15,25 @@
 
     <name>kemitix-maven-tiles-coverage</name>
     <description>maven-jacoco-plugin for kemitix-maven-tiles</description>
+
+    <properties>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
+        <jacoco-class-line-covered-ratio>1</jacoco-class-line-covered-ratio>
+        <jacoco-class-instruction-covered-ratio>1</jacoco-class-instruction-covered-ratio>
+        <jacoco-class-missed-count-maximum>0</jacoco-class-missed-count-maximum>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>
