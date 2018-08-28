@@ -15,4 +15,21 @@
 
     <name>kemitix-maven-tiles-huntbugs</name>
     <description>huntbugs-maven-plugin for kemitix-maven-tiles</description>
+
+    <properties>
+        <huntbugs.version>0.0.11</huntbugs.version>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>one.util</groupId>
+                    <artifactId>huntbugs-maven-plugin</artifactId>
+                    <version>${huntbugs.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>

@@ -1,17 +1,10 @@
 <project>
-    <properties>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jacoco-maven-plugin.version>0.8.2</jacoco-maven-plugin.version>
-        <jacoco-class-line-covered-ratio>1</jacoco-class-line-covered-ratio>
-        <jacoco-class-instruction-covered-ratio>1</jacoco-class-instruction-covered-ratio>
-        <jacoco-class-missed-count-maximum>0</jacoco-class-missed-count-maximum>
-    </properties>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco-maven-plugin.version}</version>
+                <version>@jacoco-maven-plugin.version@</version>
                 <executions>
                     <execution>
                         <goals>
@@ -48,17 +41,17 @@
                                 <limit>
                                     <counter>LINE</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>${jacoco-class-line-covered-ratio}</minimum>
+                                    <minimum>@jacoco-class-line-covered-ratio@</minimum>
                                 </limit>
                                 <limit>
                                     <counter>INSTRUCTION</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>${jacoco-class-instruction-covered-ratio}</minimum>
+                                    <minimum>@jacoco-class-instruction-covered-ratio@</minimum>
                                 </limit>
                                 <limit>
                                     <counter>CLASS</counter>
                                     <value>MISSEDCOUNT</value>
-                                    <maximum>${jacoco-class-missed-count-maximum}</maximum>
+                                    <maximum>@jacoco-class-missed-count-maximum@</maximum>
                                 </limit>
                             </limits>
                         </rule>
@@ -72,7 +65,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>${jacoco-maven-plugin.version}</version>
+                <version>@jacoco-maven-plugin.version@</version>
             </plugin><!-- jacoco-maven-plugin -->
         </plugins>
     </reporting>

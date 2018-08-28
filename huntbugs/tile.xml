@@ -1,6 +1,6 @@
 <project>
     <properties>
-        <huntbugs.version>0.0.11</huntbugs.version>
+        <huntbugs.version>@huntbugs.version@</huntbugs.version>
     </properties>
     <profiles>
         <profile>

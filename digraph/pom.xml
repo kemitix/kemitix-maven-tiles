@@ -15,4 +15,22 @@
 
     <name>kemitix-maven-tiles-digraph</name>
     <description>digraph-maven-plugin for kemitix-maven-tiles</description>
+
+    <properties>
+        <digraph-dependency.version>0.9.0</digraph-dependency.version>
+        <digraph-dependency.basePackage>net.kemitix</digraph-dependency.basePackage>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>net.kemitix</groupId>
+                    <artifactId>digraph-dependency-maven-plugin</artifactId>
+                    <version>${digraph-dependency.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>
