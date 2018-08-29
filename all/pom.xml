@@ -22,54 +22,63 @@
             <artifactId>maven-plugins</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>enforcer</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>compiler</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>huntbugs</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>pmd</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>digraph</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>testing</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>coverage</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
             <artifactId>pitest</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
+            <type>tile</type>
         </dependency>
     </dependencies>
 </project>
