@@ -8,7 +8,7 @@ Maven Tiles for preconfigured plugins.
 
 ### Usage
 
-For Java 9 and Maven 3.5.0+ applications:
+For Java 8 and Maven 3.5.0+ applications:
 
 ```xml
 <project>
@@ -32,7 +32,7 @@ For Java 9 and Maven 3.5.0+ applications:
 
                          <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:compiler:${kemitix-tiles.version}</tile>
+                         <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>

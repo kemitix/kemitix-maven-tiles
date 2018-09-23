@@ -33,7 +33,7 @@
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
-            <artifactId>compiler</artifactId>
+            <artifactId>compiler-jdk-8</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
             <type>tile</type>

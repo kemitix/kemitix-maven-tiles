@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>compiler</artifactId>
+    <artifactId>compiler-jdk-8</artifactId>
     <packaging>tile</packaging>
 
     <name>kemitix-maven-tiles-compiler</name>
