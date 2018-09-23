@@ -26,8 +26,9 @@ For Java 8 and Maven 3.5.0+ applications:
                 <extensions>true</extensions>
                 <configuration>
                     <tiles>
-                         <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
+                        <!-- all includes: maven-plugins, enforcer, compiler-jdk-8, huntbugs, pmd, digraph, testing, coverage and pitest -->
+                        <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
                    </tiles>
                 </configuration>
             </plugin>
@@ -45,18 +46,21 @@ For Java 8 and Maven 3.5.0+ applications:
                 <extensions>true</extensions>
                 <configuration>
                     <tiles>
-                         <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
 
-                         <!-- Java 8 only - not compatible with Java 9+ -->
-                         <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
-                         <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
+                        <!-- select one of: -->
+                        <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
+
+                        <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
+
+                        <!-- Java 8 only - not compatible with Java 9+ -->
+                        <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
+                        <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
 
                    </tiles>
                 </configuration>
@@ -112,13 +116,15 @@ Required Maven Version is set by the `required-maven.version` property. Default 
 ./mvnw validate -Drequired-maven.version=3.3.9
 ```
 
-### Compiler Tile
+### Compiler JDK 8 and 11 Tiles
+
+Select `compiler-jdk-8` or `compiler-jdk-11` to select your JAva compiler.
 
 #### Maven Compiler Plugin
 
 The [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) compiles your sources.
 
-Compilation targets Java 9 by default. Set the `java.version` property to 1.8 to use Java 8.
+Compilation targets Java 8 or 11 depending on the `compiler-jdk-*` tile. Set the `java.version` property to override.
 
 Ref: [compile:compile](https://maven.apache.org/plugins/maven-compiler-plugin/compile-mojo.html)
 
