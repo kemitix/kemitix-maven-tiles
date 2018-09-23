@@ -16,6 +16,7 @@ For Java 8 and Maven 3.5.0+ applications:
         <tiles-maven-plugin.version>2.11</tiles-maven-plugin.version>
         <kemitix-tiles.version>DEV-SNAPSHOT</kemitix-tiles.version>
     </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -27,9 +28,23 @@ For Java 8 and Maven 3.5.0+ applications:
                     <tiles>
                          <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
+                   </tiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-                         <!-- or -->
+    <!-- or -->
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                 <version>${tiles-maven-plugin.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
                          <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
                          <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
@@ -52,8 +67,6 @@ For Java 8 and Maven 3.5.0+ applications:
 ```
 
 Where Maven 3.3.9 is required, e.g. IntelliJ, set the `required-maven.version` property.
-
-Where Java 1.8 is required set the `java.version` property to `1.8`.
 
 ### Properties
 
