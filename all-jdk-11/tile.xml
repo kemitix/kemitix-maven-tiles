@@ -1,0 +1,23 @@
+<project>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <version>@tiles-maven-plugin.version@</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>net.kemitix.tiles:maven-plugins:@project.version@</tile>
+                        <tile>net.kemitix.tiles:enforcer:@project.version@</tile>
+                        <tile>net.kemitix.tiles:compiler-jdk-11:@project.version@</tile>
+                        <tile>net.kemitix.tiles:pmd:@project.version@</tile>
+                        <tile>net.kemitix.tiles:digraph:@project.version@</tile>
+                        <tile>net.kemitix.tiles:testing:@project.version@</tile>
+                        <tile>net.kemitix.tiles:coverage:@project.version@</tile>
+                    </tiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

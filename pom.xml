@@ -42,6 +42,7 @@
         <module>pmd</module>
         <module>pmd-strict</module>
         <module>all</module>
+        <module>all-jdk-11</module>
     </modules>
 
 </project>

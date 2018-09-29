@@ -31,13 +31,23 @@
      </project>
    #+END_SRC
 
-*** all-in-one
+*** all-in-one for Java 8
 
     For Java 8 applications you can use either, the `all` tile:
 
     #+BEGIN_SRC xml
       <tiles>
         <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
+      </tiles>
+    #+END_SRC
+
+*** all-in-one for Java 11
+
+    For Java 11 applications you can use either, the `all-jdk-11` tile:
+
+    #+BEGIN_SRC xml
+      <tiles>
+        <tile>net.kemitix.tiles:all-jdk-11:${kemitix-tiles.version}</tile>
       </tiles>
     #+END_SRC
 
@@ -59,11 +69,12 @@
       </tiles>
     #+END_SRC
 
-    The following tiles are available, but are not included in the `all` tile:
+    The `all-jdk-11` tile includes the same tiles as `all` excluding `huntbugs` and `pitest` and replacing `compiler-jdk-8` with `compiler-jdk-11`.
+
+    The following tile is available, but is not included in either the `all` or `all-jdk-11` tiles:
 
     #+BEGIN_SRC xml
       <tiles>
-        <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
       </tiles>
     #+END_SRC
