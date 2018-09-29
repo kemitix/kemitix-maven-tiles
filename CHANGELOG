@@ -1,6 +1,15 @@
 CHANGELOG
 =========
 
+1.2.0
+-----
+
+* [compiler] rename tile as `compiler-jdk-8`
+* [compiler-jdk-11] new tile
+* [all-jdk-11] new tile
+* [enforcer] require Maven 3.5.4
+* [readme] rewritten (in org-mode format)
+
 1.1.0
 -----
 

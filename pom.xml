@@ -30,7 +30,8 @@
 
     <modules>
         <module>parent</module>
-        <module>compiler</module>
+        <module>compiler-jdk-8</module>
+        <module>compiler-jdk-11</module>
         <module>digraph</module>
         <module>enforcer</module>
         <module>coverage</module>
@@ -41,6 +42,7 @@
         <module>pmd</module>
         <module>pmd-strict</module>
         <module>all</module>
+        <module>all-jdk-11</module>
     </modules>
 
 </project>
