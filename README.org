@@ -1,0 +1,235 @@
+* kemitix-maven-tiles
+
+  Maven Tiles for preconfiguring plugins. Uses the [[https://github.com/repaint-io/maven-tiles][io.repaint.maven:tiles-maven-plugin]].
+
+  [[https://oss.sonatype.org/content/repositories/releases/net/kemitix/tiles/kemitix-maven-tiles][file:https://img.shields.io/nexus/r/https/oss.sonatype.org/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge]
+  [[https://search.maven.org/search?q=g:net.kemitix.tiles%20AND%20a:kemitix-maven-tiles][file:https://img.shields.io/maven-central/v/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge]
+
+** Usage
+
+   Given:
+
+   #+BEGIN_SRC xml
+     <project>
+       <properties>
+         <tiles-maven-plugin.version>2.11</tiles-maven-plugin.version>
+         <kemitix-tiles.version>DEV-SNAPSHOT</kemitix-tiles.version>
+       </properties>
+       <build>
+         <plugins>
+           <plugin>
+             <groupId>io.repaint.maven</groupId>
+             <artifactId>tiles-maven-plugin</artifactId>
+             <version>${tiles-maven-plugin.version}</version>
+             <extensions>true</extensions>
+             <configuration>
+               <tiles><!-- see below --></tiles>
+             </configuration>
+           </plugin>
+         </plugins>
+       </build>
+     </project>
+   #+END_SRC
+
+*** all-in-one
+
+    For Java 8 applications you can use either, the `all` tile:
+
+    #+BEGIN_SRC xml
+      <tiles>
+        <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
+      </tiles>
+    #+END_SRC
+
+*** individual
+
+    The `all` tile will give you the same as:
+
+    #+BEGIN_SRC xml
+      <tiles>
+        <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
+      </tiles>
+    #+END_SRC
+
+    The following tiles are available, but are not included in the `all` tile:
+
+    #+BEGIN_SRC xml
+      <tiles>
+        <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
+      </tiles>
+    #+END_SRC
+
+    For Java 11 use the individual tiles, replacing the `compile-jdk-8` with `compiler-jdk-11`.
+
+*** Use with IntelliJ IDE
+
+    The IntelliJ IDE still bundles Maven 3.3.9. In order to avoid the `enforcer`
+    tile breaking you need to either tell IntelliJ not to use the bundles copy
+    of Maven (e.g. `[shift]+[shift]maven home`), or specify the
+    `required-maven.version` property in the IntelliJ run configurations (e.g.
+    add `-Drequired-maven.version=3.3.9` to the Command line).
+    
+** Tiles
+
+*** maven-plugins
+
+    Specifies up-to-date versions for the following `org.apache.maven.plugins`:
+
+    * `maven-clean-plugin`
+    * `maven-resources-plugin`
+    * `maven-install-plugin`
+    * `maven-site-plugin`
+    * `maven-jxr-plugin`
+
+    The `maven-jxr-plugin` is also configured to execute its `jxr` goal during
+    the Maven `compile` phase.
+
+    In addition, the following non-Apache plugin is included:
+
+    * `versions-maven-plugin`
+
+      Adds an updated version of the `org.codehaus.mojo:versions-maven-plugin`
+      plugin. It is configured to produce the `dependency-updates-report`,
+      `plugin-updates-report` and the `property-updates-report`
+
+*** enforcer
+
+    Provides the `maven-enforcer-plugin`, performing the `display-info` and `enforce` goals during the `validate` phase.
+
+    Required Maven Version is set by the `required-maven.version` property. Default is 3.5.4.
+
+    #+BEGIN_SRC shell
+      mvn validate -Drequired-maven.version=3.3.9
+    #+END_SRC
+
+*** Compiler JDK 8 and 11 Tiles
+
+    Select either the `compiler-jdk-8` or `compiler-jdk-11` to select your Java compiler.
+
+    Both tiles configure the [[https://maven.apache.org/plugins/maven-compiler-plugin/][maven-compiler-plugin]] with the following options:
+
+    * display unchecked cast warnings
+    * show source locations where deprecated APIs are used
+    * show compilation warnings
+    * use source encoding UTF-8
+
+*** huntbugs
+
+    **Deprecated**
+
+    The plugin in this tile are only enabled when using a 1.8 JDK.
+
+    The [Huntbugs Maven Plugin](https://github.com/amaembo/huntbugs) performs a
+    static analysis of the compiled bytecode for common bug patterns during the
+    `verify` phase.
+
+    Trying to use the 0.0.11 version of the Huntbugs Maven Plugin with JDK 9
+    will result in the error:
+
+    ```
+    [ERROR] Failed to execute goal one.util:huntbugs-maven-plugin:0.0.11:huntbugs (default-cli) on project foo:
+        Execution default-cli of goal one.util:huntbugs-maven-plugin:0.0.11:huntbugs failed:
+            A required class was missing while executing one.util:huntbugs-maven-plugin:0.0.11:huntbugs:
+                sun/misc/URLClassPath
+    ```
+
+    For this reason, and that the module appears to have been abandoned, the tile is deprecated and will be removed soon.
+
+*** PMD Tiles
+
+    There are two PMD tiles: `pmd` and `pmd-strict`.
+
+    The [[https://maven.apache.org/plugins/maven-pmd-plugin/][PMD Maven Plugin]] performs the PMD static code analysis and copy-paste
+    detection during the `verify` phase.
+
+    When the `maven-plugins` tile is also used, then the error reports will
+    include links to the `maven-jxr-plugin` generated source code HTML pages.
+
+**** pmd
+
+     Checks the source code against the rules in the [[https://github.com/kemitix/kemitix-pmd-ruleset][kemitix-pmd-ruleset]] file
+     [[https://github.com/kemitix/kemitix-pmd-ruleset/blob/master/src/main/resources/net/kemitix/pmd/java.xml][java.xml]].
+
+     Creates HTML reports in `target/site/pmd.html` and `target/site/cpd.html`.
+
+**** pmd-strict
+
+     Requires the `pmd` tile.
+
+     Not included in the `all` tile.
+
+     Unlike the `pmd` tile, if there are any violations of the ruleset then the
+     build will fail.
+
+*** digraph
+
+    The [[https://github.com/kemitix/digraph-dependency-maven-plugin/][Digraph Maven Plugin]] creates a graphviz diagram of the package
+    dependencies within the source code during the `verify` phase.
+
+    Set the property `digraph-dependency.basePackage` to the base of the project
+    to be graphed. The default value is `net.kemitix`.
+
+*** testing
+
+**** Maven Surefire Plugin
+
+     The [[http://maven.apache.org/surefire/maven-surefire-plugin/index.html][Maven Surefire Plugin]] runs your Unit Tests during the `test` phase.
+
+**** Maven Failsafe Plugin
+
+     The [[http://maven.apache.org/surefire/maven-failsafe-plugin/index.html][Maven Failsafe Plugin]] runs your Integration Tests during the `verify`
+     phase.
+
+*** coverage
+
+**** Jacoco Maven Plugin
+
+     The [[http://www.eclemma.org/jacoco/trunk/doc/maven.html][Jacoco Maven Plugin]] verifies that the test suite meets the required
+     coverage ratios.
+
+     The defaults require that all classes, lines and branches be covered by
+     tests. i.e. 100% code coverage.
+
+     Set the following properties to set less strict targets:
+
+     * `jacoco-class-line-covered-ratio` - default = 1 (i.e. 100%)
+     * `jacoco-class-instruction-covered-ratio` - default = 1 (i.e. 100%)
+     * `jacoco-class-missed-count-maximum` - default = 0 (i.e. #classes with no tests <= 0)
+
+     Classes with names that end in the following are excluded from these limits:
+
+     * `Test`
+     * `IT`
+     * `Main`
+     * `Application`
+     * `Configuration`
+     * `Immutable`
+
+*** pitest
+
+    The plugins in this tile are only enabled when using a 1.8 JDK.
+
+**** Mutation Testing
+
+     The [[http://pitest.org/quickstart/maven/][Pitest Maven Plugin]] perform mutation test coverage checks during the
+     `verify` phase.
+
+     Code coverage must by 100%. The build will fail if any mutation does not result in test failing.
+
+     Set `pitest.skip` to avoid running the mutation testing.
+
+     Set `pitest.coverage` to a value between 0 and 1 to set the allowed ratio
+     of uncovered code. i.e. 0 = 100% code coverage, 0.2 = 80% code coverage (default is 0)
+
+     Set `pitest.mutation` to a value between 0 and 1 to set the allowed
+     mutations to survive the test suite. i.e. 0 = 100% mutations caught, 0.2 =
+     80% mutations caught (default is 0)
