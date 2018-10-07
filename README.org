@@ -2,8 +2,8 @@
 
   Maven Tiles for preconfiguring plugins. Uses the [[https://github.com/repaint-io/maven-tiles][io.repaint.maven:tiles-maven-plugin]].
 
-  [[https://oss.sonatype.org/content/repositories/releases/net/kemitix/tiles/kemitix-maven-tiles][file:https://img.shields.io/nexus/r/https/oss.sonatype.org/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge]
-  [[https://search.maven.org/search?q=g:net.kemitix.tiles%20AND%20a:kemitix-maven-tiles][file:https://img.shields.io/maven-central/v/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge]
+  [[https://oss.sonatype.org/content/repositories/releases/net/kemitix/tiles/kemitix-maven-tiles][file:https://img.shields.io/nexus/r/https/oss.sonatype.org/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge]]
+  [[https://search.maven.org/search?q=g:net.kemitix.tiles%20AND%20a:kemitix-maven-tiles][file:https://img.shields.io/maven-central/v/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge]]
 
 ** Usage
 
