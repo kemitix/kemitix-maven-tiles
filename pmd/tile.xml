@@ -50,14 +50,14 @@
                 <executions>
                     <execution>
                         <id>pmd</id>
-                        <phase>verify</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>pmd</goal>
                         </goals>
                     </execution>
                     <execution>
                         <id>cpd</id>
-                        <phase>verify</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>cpd</goal>
                         </goals>
