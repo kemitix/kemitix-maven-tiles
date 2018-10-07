@@ -5,6 +5,8 @@ CHANGELOG
 -----
 
 * [pmd] exec pmd:pmd and pmd:cpd during test phase
+* [pmd] Bump pmd.version from 6.7.0 to 6.8.0
+* [pitest] Bump pitest-maven from 1.4.2 to 1.4.3
 
 1.2.0
 -----
