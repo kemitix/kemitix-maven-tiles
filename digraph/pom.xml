@@ -18,7 +18,6 @@
 
     <properties>
         <digraph-dependency.version>0.9.1</digraph-dependency.version>
-        <digraph-dependency.basePackage>net.kemitix</digraph-dependency.basePackage>
     </properties>
 
     <build>
