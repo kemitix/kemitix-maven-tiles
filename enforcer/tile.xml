@@ -1,7 +1,7 @@
 <project>
     <properties>
         <maven-enforcer-plugin.version>@maven-enforcer-plugin.version@</maven-enforcer-plugin.version>
-        <required-maven.version>@required-maven.version@</required-maven.version>
+        <required-maven.version>3.5.4</required-maven.version>
     </properties>
     <build>
         <plugins>

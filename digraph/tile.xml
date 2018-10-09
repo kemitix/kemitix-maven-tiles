@@ -1,14 +1,13 @@
 <project>
     <properties>
-        <digraph-dependency.version>@digraph-dependency.version@</digraph-dependency.version>
-        <digraph-dependency.basePackage>@digraph-dependency.basePackage@</digraph-dependency.basePackage>
+        <digraph-dependency.basePackage>net.kemitix</digraph-dependency.basePackage>
     </properties>
     <build>
         <plugins>
             <plugin>
                 <groupId>net.kemitix</groupId>
                 <artifactId>digraph-dependency-maven-plugin</artifactId>
-                <version>${digraph-dependency.version}</version>
+                <version>@digraph-dependency.version@</version>
                 <configuration>
                     <basePackage>${digraph-dependency.basePackage}</basePackage>
                 </configuration>

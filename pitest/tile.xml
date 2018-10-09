@@ -2,10 +2,10 @@
     <properties>
         <highwheel-maven-plugin.version>@highwheel-maven-plugin.version@</highwheel-maven-plugin.version>
         <pitest-maven-plugin.version>@pitest-maven-plugin.version@</pitest-maven-plugin.version>
-        <pitest.coverage>@pitest.coverage@</pitest.coverage>
-        <pitest.mutation>@pitest.mutation@</pitest.mutation>
-        <pitest.skip>@pitest.skip@</pitest.skip>
-        <pitest.failWhenNoMutations>@pitest.failWhenNoMutations@</pitest.failWhenNoMutations>
+        <pitest.coverage>0</pitest.coverage>
+        <pitest.mutation>0</pitest.mutation>
+        <pitest.skip>false</pitest.skip>
+        <pitest.failWhenNoMutations>true</pitest.failWhenNoMutations>
     </properties>
     <profiles>
         <profile>

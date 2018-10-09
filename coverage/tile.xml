@@ -1,4 +1,9 @@
 <project>
+    <properties>
+        <jacoco-class-line-covered-ratio>100%</jacoco-class-line-covered-ratio>
+        <jacoco-class-instruction-covered-ratio>100%</jacoco-class-instruction-covered-ratio>
+        <jacoco-class-missed-count-maximum>0%</jacoco-class-missed-count-maximum>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -41,17 +46,17 @@
                                 <limit>
                                     <counter>LINE</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>@jacoco-class-line-covered-ratio@</minimum>
+                                    <minimum>${jacoco-class-line-covered-ratio}</minimum>
                                 </limit>
                                 <limit>
                                     <counter>INSTRUCTION</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>@jacoco-class-instruction-covered-ratio@</minimum>
+                                    <minimum>${jacoco-class-instruction-covered-ratio}</minimum>
                                 </limit>
                                 <limit>
                                     <counter>CLASS</counter>
                                     <value>MISSEDCOUNT</value>
-                                    <maximum>@jacoco-class-missed-count-maximum@</maximum>
+                                    <maximum>${jacoco-class-missed-count-maximum}</maximum>
                                 </limit>
                             </limits>
                         </rule>
