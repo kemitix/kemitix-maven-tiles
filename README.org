@@ -33,7 +33,7 @@
 
 *** all-in-one for Java 8
 
-    For Java 8 applications you can use either, the `all` tile:
+    For Java 8 applications you can use the `all` tile:
 
     #+BEGIN_SRC xml
       <tiles>
@@ -43,7 +43,7 @@
 
 *** all-in-one for Java 11
 
-    For Java 11 applications you can use either, the `all-jdk-11` tile:
+    For Java 11 applications you can use the `all-jdk-11` tile:
 
     #+BEGIN_SRC xml
       <tiles>
@@ -51,9 +51,9 @@
       </tiles>
     #+END_SRC
 
-*** individual
+*** individual tiles
 
-    The `all` tile will give you the same as:
+    The `all` tile gives you the same as:
 
     #+BEGIN_SRC xml
       <tiles>
@@ -69,9 +69,11 @@
       </tiles>
     #+END_SRC
 
-    The `all-jdk-11` tile includes the same tiles as `all` excluding `huntbugs` and `pitest` and replacing `compiler-jdk-8` with `compiler-jdk-11`.
+    The `all-jdk-11` tile includes the same tiles as `all` excluding `huntbugs`
+    and `pitest` and replacing `compiler-jdk-8` with `compiler-jdk-11`.
 
-    The following tile is available, but is not included in either the `all` or `all-jdk-11` tiles:
+    The following tile is available, but is not included in either the `all` or
+    `all-jdk-11` tiles:
 
     #+BEGIN_SRC xml
       <tiles>
@@ -79,12 +81,13 @@
       </tiles>
     #+END_SRC
 
-    For Java 11 use the individual tiles, replacing the `compile-jdk-8` with `compiler-jdk-11`.
+    For Java 11 use the individual tiles, replacing the `compile-jdk-8` with
+    `compiler-jdk-11`.
 
 *** Use with IntelliJ IDE
 
     The IntelliJ IDE still bundles Maven 3.3.9. In order to avoid the `enforcer`
-    tile breaking you need to either tell IntelliJ not to use the bundles copy
+    tile breaking you need to either tell IntelliJ not to use the bundled copy
     of Maven (e.g. `[shift]+[shift]maven home`), or specify the
     `required-maven.version` property in the IntelliJ run configurations (e.g.
     add `-Drequired-maven.version=3.3.9` to the Command line).
@@ -93,7 +96,7 @@
 
 *** maven-plugins
 
-    Specifies up-to-date versions for the following `org.apache.maven.plugins`:
+    Specifies up-to-date versions of the following `org.apache.maven.plugins`:
 
     * `maven-clean-plugin`
     * `maven-resources-plugin`
@@ -101,10 +104,10 @@
     * `maven-site-plugin`
     * `maven-jxr-plugin`
 
-    The `maven-jxr-plugin` is also configured to execute its `jxr` goal during
-    the Maven `compile` phase.
+    The `maven-jxr-plugin` is configured to execute its `jxr` goal during the
+    Maven `compile` phase.
 
-    In addition, the following non-Apache plugin is included:
+    In addition, the following non-Apache plugin is included with this tile:
 
     * `versions-maven-plugin`
 
@@ -114,9 +117,11 @@
 
 *** enforcer
 
-    Provides the `maven-enforcer-plugin`, performing the `display-info` and `enforce` goals during the `validate` phase.
+    Provides the `maven-enforcer-plugin`, performing the `display-info` and
+    `enforce` goals during the `validate` phase.
 
-    Required Maven Version is set by the `required-maven.version` property. Default is 3.5.4.
+    Required Maven Version is set by the `required-maven.version` property.
+    Default is 3.5.4.
 
     #+BEGIN_SRC shell
       mvn validate -Drequired-maven.version=3.3.9
@@ -124,7 +129,8 @@
 
 *** Compiler JDK 8 and 11 Tiles
 
-    Select either the `compiler-jdk-8` or `compiler-jdk-11` to select your Java compiler.
+    Select either the `compiler-jdk-8` or `compiler-jdk-11` to select your Java
+    compiler.
 
     Both tiles configure the [[https://maven.apache.org/plugins/maven-compiler-plugin/][maven-compiler-plugin]] with the following options:
 
@@ -153,7 +159,8 @@
                 sun/misc/URLClassPath
     ```
 
-    For this reason, and that the module appears to have been abandoned, the tile is deprecated and will be removed soon.
+    For this reason, and that the module appears to have been abandoned, the
+    tile is deprecated and will be removed soon.
 
 *** PMD Tiles
 
@@ -182,6 +189,8 @@
      build will fail.
 
 *** digraph
+
+    **Deprecated**
 
     The [[https://github.com/kemitix/digraph-dependency-maven-plugin/][Digraph Maven Plugin]] creates a graphviz diagram of the package
     dependencies within the source code during the `verify` phase.
@@ -234,12 +243,14 @@
      The [[http://pitest.org/quickstart/maven/][Pitest Maven Plugin]] perform mutation test coverage checks during the
      `verify` phase.
 
-     Code coverage must by 100%. The build will fail if any mutation does not result in test failing.
+     Code coverage must by 100%. The build will fail if any mutation does not
+     result in test failing.
 
      Set `pitest.skip` to avoid running the mutation testing.
 
      Set `pitest.coverage` to a value between 0 and 1 to set the allowed ratio
-     of uncovered code. i.e. 0 = 100% code coverage, 0.2 = 80% code coverage (default is 0)
+     of uncovered code. i.e. 0 = 100% code coverage, 0.2 = 80% code coverage
+     (default is 0)
 
      Set `pitest.mutation` to a value between 0 and 1 to set the allowed
      mutations to survive the test suite. i.e. 0 = 100% mutations caught, 0.2 =
