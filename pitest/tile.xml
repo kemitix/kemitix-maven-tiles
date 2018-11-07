@@ -2,6 +2,7 @@
     <properties>
         <highwheel-maven-plugin.version>@highwheel-maven-plugin.version@</highwheel-maven-plugin.version>
         <pitest-maven-plugin.version>@pitest-maven-plugin.version@</pitest-maven-plugin.version>
+        <pitest-junit5-plugin.version>@pitest-junit5-plugin.version@</pitest-junit5-plugin.version>
         <pitest.coverage>0</pitest.coverage>
         <pitest.mutation>0</pitest.mutation>
         <pitest.skip>false</pitest.skip>
@@ -26,6 +27,13 @@
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
                 <version>${pitest-maven-plugin.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.pitest</groupId>
+                        <artifactId>pitest-junit5-plugin</artifactId>
+                        <version>${pitest-junit5-plugin.version}</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <phase>verify</phase>
