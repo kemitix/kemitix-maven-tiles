@@ -12,7 +12,7 @@
    #+BEGIN_SRC xml
      <project>
        <properties>
-         <tiles-maven-plugin.version>2.11</tiles-maven-plugin.version>
+         <tiles-maven-plugin.version>2.12</tiles-maven-plugin.version>
          <kemitix-tiles.version>DEV-SNAPSHOT</kemitix-tiles.version>
        </properties>
        <build>
