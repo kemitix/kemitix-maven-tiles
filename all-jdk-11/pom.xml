@@ -13,8 +13,8 @@
     <artifactId>all-jdk-11</artifactId>
     <packaging>tile</packaging>
 
-    <name>kemitix-maven-tiles-all</name>
-    <description>(Almost) All kemitix-maven-tiles</description>
+    <name>kemitix-maven-tiles-all-jdk-11</name>
+    <description>(Almost) All kemitix-maven-tiles (JDK 11)</description>
 
     <dependencies>
         <dependency>

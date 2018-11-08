@@ -13,7 +13,7 @@
     <artifactId>compiler-jdk-8</artifactId>
     <packaging>tile</packaging>
 
-    <name>kemitix-maven-tiles-compiler</name>
+    <name>kemitix-maven-tiles-compiler-jdk-8</name>
     <description>maven-compiler-plugin for kemitix-maven-tiles</description>
 
     <properties>
