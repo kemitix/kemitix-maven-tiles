@@ -40,6 +40,13 @@
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
+            <artifactId>spotbugs</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+            <type>tile</type>
+        </dependency>
+        <dependency>
+            <groupId>net.kemitix.tiles</groupId>
             <artifactId>pmd</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>

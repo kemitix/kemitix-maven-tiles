@@ -139,6 +139,13 @@
     * show compilation warnings
     * use source encoding UTF-8
 
+*** spotbugs
+
+    The [Spotbugs Maven Plugin](https://spotbugs.github.io) performs a static
+    code analysis and will make the build failed if it finds any bugs.
+
+    It will perform this analysis during the `verify` phase.
+
 *** huntbugs
 
     **Deprecated**

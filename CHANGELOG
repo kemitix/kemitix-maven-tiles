@@ -7,6 +7,7 @@ CHANGELOG
 * [coverage] Execute jacoco:check before pitest:mutationCoverage
 * [pitest] Use in JDK 11+
 * [BREAKING] [pitest] Require JUnit 5
+* [spotbugs] Add tile and add to `all*` tiles
 
 1.3.2
 -----
