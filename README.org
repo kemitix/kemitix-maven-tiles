@@ -148,7 +148,7 @@
 
 *** huntbugs
 
-    **Deprecated**
+    **Deprecated - will be remove in `kemitix-maven-tiles 3.x.x`**
 
     The plugin in this tile are only enabled when using a 1.8 JDK.
 
