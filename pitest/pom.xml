@@ -19,6 +19,7 @@
     <properties>
         <highwheel-maven-plugin.version>1.3</highwheel-maven-plugin.version>
         <pitest-maven-plugin.version>1.4.3</pitest-maven-plugin.version>
+        <pitest-junit5-plugin.version>0.8</pitest-junit5-plugin.version>
     </properties>
 
     <build>
@@ -33,6 +34,13 @@
                     <groupId>org.pitest</groupId>
                     <artifactId>pitest-maven</artifactId>
                     <version>${pitest-maven-plugin.version}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.pitest</groupId>
+                            <artifactId>pitest-junit5-plugin</artifactId>
+                            <version>${pitest-junit5-plugin.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>

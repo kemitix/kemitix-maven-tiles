@@ -13,8 +13,8 @@
     <artifactId>all</artifactId>
     <packaging>tile</packaging>
 
-    <name>kemitix-maven-tiles-all</name>
-    <description>(Almost) All kemitix-maven-tiles</description>
+    <name>kemitix-maven-tiles-all-jdk-8</name>
+    <description>(Almost) All kemitix-maven-tiles (JDK 8)</description>
 
     <dependencies>
         <dependency>
@@ -40,7 +40,7 @@
         </dependency>
         <dependency>
             <groupId>net.kemitix.tiles</groupId>
-            <artifactId>huntbugs</artifactId>
+            <artifactId>spotbugs</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
             <type>tile</type>

@@ -11,7 +11,7 @@
                         <tile>net.kemitix.tiles:maven-plugins:@project.version@</tile>
                         <tile>net.kemitix.tiles:enforcer:@project.version@</tile>
                         <tile>net.kemitix.tiles:compiler-jdk-8:@project.version@</tile>
-                        <tile>net.kemitix.tiles:huntbugs:@project.version@</tile>
+                        <tile>net.kemitix.tiles:spotbugs:@project.version@</tile>
                         <tile>net.kemitix.tiles:pmd:@project.version@</tile>
                         <tile>net.kemitix.tiles:digraph:@project.version@</tile>
                         <tile>net.kemitix.tiles:testing:@project.version@</tile>

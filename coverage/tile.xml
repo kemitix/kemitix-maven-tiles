@@ -25,6 +25,7 @@
                     </execution>
                     <execution>
                         <id>default-check</id>
+                        <phase>post-integration-test</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>

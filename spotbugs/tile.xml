@@ -1,0 +1,22 @@
+<project>
+    <properties>
+        <spotbugs.version>@spotbugs.version@</spotbugs.version>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>${spotbugs.version}</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin><!-- spotbugs-maven-plugin -->
+        </plugins>
+    </build>
+</project>
