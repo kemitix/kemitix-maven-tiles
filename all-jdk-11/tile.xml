@@ -15,6 +15,7 @@
                         <tile>net.kemitix.tiles:digraph:@project.version@</tile>
                         <tile>net.kemitix.tiles:testing:@project.version@</tile>
                         <tile>net.kemitix.tiles:coverage:@project.version@</tile>
+                        <tile>net.kemitix.tiles:pitest:@project.version@</tile>
                     </tiles>
                 </configuration>
             </plugin>
