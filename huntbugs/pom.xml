@@ -13,7 +13,7 @@
     <artifactId>huntbugs</artifactId>
     <packaging>tile</packaging>
 
-    <name>kemitix-maven-tiles-huntbugs</name>
+    <name>kemitix-maven-tiles-huntbugs (deprecated)</name>
     <description>huntbugs-maven-plugin for kemitix-maven-tiles</description>
 
     <properties>

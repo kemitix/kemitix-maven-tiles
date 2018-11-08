@@ -8,6 +8,7 @@ CHANGELOG
 * [pitest] Use in JDK 11+
 * [BREAKING] [pitest] Require JUnit 5
 * [spotbugs] Add tile and add to `all*` tiles
+* [huntbugs,all] Remove from `all*` tiles
 
 1.3.2
 -----
