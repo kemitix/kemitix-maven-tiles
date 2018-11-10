@@ -1,6 +1,7 @@
 <project>
     <properties>
         <spotbugs.version>@spotbugs.version@</spotbugs.version>
+        <findsecbugs-plugin.version>@findsecbugs-plugin.version@</findsecbugs-plugin.version>
     </properties>
     <build>
         <plugins>
@@ -16,6 +17,15 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.h3xstream.findsecbugs</groupId>
+                            <artifactId>findsecbugs-plugin</artifactId>
+                            <version>${findsecbugs-plugin.version}</version>
+                        </plugin>
+                    </plugins>
+                </configuration>
             </plugin><!-- spotbugs-maven-plugin -->
         </plugins>
     </build>
