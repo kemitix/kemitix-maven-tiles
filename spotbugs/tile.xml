@@ -2,6 +2,7 @@
     <properties>
         <spotbugs.version>@spotbugs.version@</spotbugs.version>
         <findsecbugs-plugin.version>@findsecbugs-plugin.version@</findsecbugs-plugin.version>
+        <fb-contrib.version>@fb-contrib.version@</fb-contrib.version>
     </properties>
     <build>
         <plugins>
@@ -23,6 +24,11 @@
                             <groupId>com.h3xstream.findsecbugs</groupId>
                             <artifactId>findsecbugs-plugin</artifactId>
                             <version>${findsecbugs-plugin.version}</version>
+                        </plugin>
+                        <plugin>
+                            <groupId>com.mebigfatguy.fb-contrib</groupId>
+                            <artifactId>fb-contrib</artifactId>
+                            <version>${fb-contrib.version}</version>
                         </plugin>
                     </plugins>
                 </configuration>
