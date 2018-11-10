@@ -12,13 +12,27 @@
 
 ** 2.0.0 - 2018-11-08
 
-  * [coverage] Execute jacoco:check before pitest:mutationCoverage
+*** Added
+
+  * [spotbugs] Add tile and add to `all*` tiles
+
+*** Changed
+
   * [pitest] Use in JDK 11+
   * [BREAKING] [pitest] Require JUnit 5
-  * [spotbugs] Add tile and add to `all*` tiles
-  * [huntbugs,all] Remove from `all*` tiles
+
+*** Dependencies
+
   * Bump maven-failsafe-plugin.version from 2.22.0 to 2.22.1 (#86)
   * Bump maven-surefire-plugin.version from 2.22.0 to 2.22.1 (#87)
+
+*** Fixed
+
+  * [coverage] Execute jacoco:check before pitest:mutationCoverage
+
+*** Removed
+
+  * [huntbugs,all] Remove from `all*` tiles
 
 ** 1.3.1 - 2018-10-09
 
