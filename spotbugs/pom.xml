@@ -18,6 +18,8 @@
 
     <properties>
         <spotbugs.version>3.1.8</spotbugs.version>
+        <findsecbugs-plugin.version>1.8.0</findsecbugs-plugin.version>
+        <fb-contrib.version>7.4.3.sb</fb-contrib.version>
     </properties>
 
     <build>
@@ -27,6 +29,16 @@
                     <groupId>com.github.spotbugs</groupId>
                     <artifactId>spotbugs-maven-plugin</artifactId>
                     <version>${spotbugs.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.h3xstream.findsecbugs</groupId>
+                    <artifactId>findsecbugs-plugin</artifactId>
+                    <version>${findsecbugs-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.mebigfatguy.fb-contrib</groupId>
+                    <artifactId>fb-contrib</artifactId>
+                    <version>${fb-contrib.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

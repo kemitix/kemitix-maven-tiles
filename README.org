@@ -141,10 +141,12 @@
 
 *** spotbugs
 
-    The [Spotbugs Maven Plugin](https://spotbugs.github.io) performs a static
+    The [[https://spotbugs.github.io][Spotbugs Maven Plugin]] performs a static
     code analysis and will make the build failed if it finds any bugs.
 
     It will perform this analysis during the `verify` phase.
+
+    It includes the [[https://find-sec-bugs.github.io][Find Security Bugs]] and [[https://github.com/mebigfatguy/fb-contrib][fb-contrib]] spotbugs plugins.
 
 *** huntbugs
 
