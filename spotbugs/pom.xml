@@ -19,7 +19,7 @@
     <properties>
         <spotbugs.version>3.1.8</spotbugs.version>
         <findsecbugs-plugin.version>1.8.0</findsecbugs-plugin.version>
-        <fb-contrib.version>7.4.3.sb</fb-contrib.version>
+        <fb-contrib.version>7.4.3</fb-contrib.version>
     </properties>
 
     <build>
