@@ -12,6 +12,7 @@
 
     * [spotbugs] findsecbugs 1.8.0
     * [spotbugs] fb-contrib 7.4.3.sb
+    * [spotbugs] separate verion properties for maven plugin
 
 *** Dependencies
 
