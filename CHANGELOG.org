@@ -6,7 +6,7 @@
   Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
   [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-** 2.1.1
+** 2.1.1 - 2018-12-06
 
 *** Fixed
 
@@ -15,6 +15,7 @@
 *** Dependencies
 
     - [pmd] Bump kemitix-pmd-ruleset from 0.4.0 to 1.0.0 (#95)
+    - [spotbugs] Bump spotbugs from 3.1.8 to 3.1.9
 
 ** 2.1.0 - 2018-11-10
 
