@@ -1,6 +1,7 @@
 <project>
     <properties>
         <spotbugs.version>@spotbugs.version@</spotbugs.version>
+        <spotbugs-maven-plugin.version>@spotbugs-maven-plugin.version@</spotbugs-maven-plugin.version>
         <findsecbugs-plugin.version>@findsecbugs-plugin.version@</findsecbugs-plugin.version>
         <fb-contrib.version>@fb-contrib.version@</fb-contrib.version>
     </properties>
@@ -9,7 +10,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>${spotbugs.version}</version>
+                <version>${spotbugs-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <phase>verify</phase>
@@ -18,6 +19,13 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.github.spotbugs</groupId>
+                        <artifactId>spotbugs</artifactId>
+                        <version>${spotbugs.version}</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <plugins>
                         <plugin>
