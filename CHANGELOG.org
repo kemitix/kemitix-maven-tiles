@@ -6,16 +6,17 @@
   Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
   [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-** 2.1.1 - 2018-12-06
+** 2.1.1 - 2018-12-07
 
 *** Fixed
 
-    - [spotbugs] separate verion properties for maven plugin
+    - [spotbugs] separate verion properties for maven plugin (#97)
 
 *** Dependencies
 
     - [pmd] Bump kemitix-pmd-ruleset from 0.4.0 to 1.0.0 (#95)
-    - [spotbugs] Bump spotbugs from 3.1.8 to 3.1.9
+    - [spotbugs] Bump spotbugs from 3.1.8 to 3.1.9 (#98)
+    - [spotbugs] Bump spotbugs-maven-plugin from 3.1.8.to 3.1.9 (#99)
 
 ** 2.1.0 - 2018-11-10
 
