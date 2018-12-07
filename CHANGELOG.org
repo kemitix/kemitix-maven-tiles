@@ -10,12 +10,13 @@
 
 *** Fixed
 
-    - [spotbugs] separate verion properties for maven plugin
+    - [spotbugs] separate verion properties for maven plugin (#97)
 
 *** Dependencies
 
     - [pmd] Bump kemitix-pmd-ruleset from 0.4.0 to 1.0.0 (#95)
-    - [spotbugs] Bump spotbugs from 3.1.8 to 3.1.9
+    - [spotbugs] Bump spotbugs from 3.1.8 to 3.1.9 (#98)
+    - [spotbugs] Bump spotbugs-maven-plugin from 3.1.8.to 3.1.9 (#99)
 
 ** 2.1.0 - 2018-11-10
 
