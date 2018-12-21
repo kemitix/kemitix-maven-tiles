@@ -18,7 +18,7 @@
 
     <properties>
         <spotbugs.version>3.1.9</spotbugs.version>
-        <spotbugs-maven-plugin.version>3.1.9</spotbugs-maven-plugin.version>
+        <spotbugs-maven-plugin.version>3.1.10</spotbugs-maven-plugin.version>
         <findsecbugs-plugin.version>1.8.0</findsecbugs-plugin.version>
         <fb-contrib.version>7.4.3.sb</fb-contrib.version>
     </properties>
