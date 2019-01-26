@@ -10,6 +10,7 @@
 ** Dependencies
 
    - [coverage] Bump jacoco-maven-plugin from 0.8.2 to 0.8.3 (#107)
+   - [spotbugs] Bump spotbugs from 3.1.10 to 3.1.11 (#106)
 
 * 2.1.2 - 2019-01-07
 
