@@ -250,8 +250,8 @@
      The [[http://pitest.org/quickstart/maven/][Pitest Maven Plugin]] perform mutation test coverage checks during the
      `verify` phase.
 
-     Code coverage must by 100%. The build will fail if any mutation does not
-     result in test failing.
+     Code coverage must by 100%, see `pitest.coverage`. The build will
+     fail if any mutation does not result in test failing.
 
      Set `pitest.skip` to avoid running the mutation testing.
 
