@@ -11,6 +11,12 @@
 
    - [pitest] highwheel-mavel-plugin - [[https://github.com/hcoles/highwheel/pull/12][JDK 11 compatibility]]
 
+** Dependencies
+
+   - Bump pmd.version from 6.11.0 to 6.12.0 (#112)
+   - Bump spotbugs-maven-plugin from 3.1.10 to 3.1.11 (#111)
+   - Bump tiles-maven-plugin from 2.12 to 2.13 (#110)
+
 * 2.1.4 - 2019-02-02
 
 ** Dependencies
