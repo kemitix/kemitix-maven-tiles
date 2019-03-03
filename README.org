@@ -12,7 +12,7 @@
    #+BEGIN_SRC xml
      <project>
        <properties>
-         <tiles-maven-plugin.version>2.12</tiles-maven-plugin.version>
+         <tiles-maven-plugin.version>2.13</tiles-maven-plugin.version>
          <kemitix-tiles.version>DEV-SNAPSHOT</kemitix-tiles.version>
        </properties>
        <build>
@@ -245,15 +245,13 @@
 
 *** pitest
 
-    The plugins in this tile are only enabled when using a 1.8 JDK.
-
 **** Mutation Testing
 
      The [[http://pitest.org/quickstart/maven/][Pitest Maven Plugin]] perform mutation test coverage checks during the
      `verify` phase.
 
-     Code coverage must by 100%. The build will fail if any mutation does not
-     result in test failing.
+     Code coverage must by 100%, see `pitest.coverage`. The build will
+     fail if any mutation does not result in test failing.
 
      Set `pitest.skip` to avoid running the mutation testing.
 
