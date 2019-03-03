@@ -14,10 +14,9 @@
     <packaging>tile</packaging>
 
     <name>kemitix-maven-tiles-pitest</name>
-    <description>{pitest,highwheel}-maven plugins for kemitix-maven-tiles</description>
+    <description>pitest-maven plugins for kemitix-maven-tiles</description>
 
     <properties>
-        <highwheel-maven-plugin.version>1.4</highwheel-maven-plugin.version>
         <pitest-maven-plugin.version>1.4.5</pitest-maven-plugin.version>
         <pitest-junit5-plugin.version>0.8</pitest-junit5-plugin.version>
     </properties>
@@ -25,11 +24,6 @@
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.pitest</groupId>
-                    <artifactId>highwheel-maven</artifactId>
-                    <version>${highwheel-maven-plugin.version}</version>
-                </plugin>
                 <plugin>
                     <groupId>org.pitest</groupId>
                     <artifactId>pitest-maven</artifactId>
