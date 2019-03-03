@@ -245,8 +245,6 @@
 
 *** pitest
 
-    The plugins in this tile are only enabled when using a 1.8 JDK.
-
 **** Mutation Testing
 
      The [[http://pitest.org/quickstart/maven/][Pitest Maven Plugin]] perform mutation test coverage checks during the
