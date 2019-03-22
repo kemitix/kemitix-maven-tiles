@@ -44,6 +44,7 @@
         <module>all</module>
         <module>all-jdk-11</module>
         <module>spotbugs</module>
+        <module>scala-lang</module>
     </modules>
 
 </project>
