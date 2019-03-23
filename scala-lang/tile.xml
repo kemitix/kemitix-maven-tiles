@@ -1,6 +1,5 @@
 <project>
     <properties>
-        <scala-library.version>@scala-library.version@</scala-library.version>
         <scala-maven-plugin.version>@scala-maven-plugin.version@</scala-maven-plugin.version>
     </properties>
     <build>

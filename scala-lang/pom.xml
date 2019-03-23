@@ -17,19 +17,8 @@
     <description>Add support for Scala</description>
 
     <properties>
-        <scala-library.version>2.12.8</scala-library.version>
         <scala-maven-plugin.version>4.0.1</scala-maven-plugin.version>
     </properties>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.scala-lang</groupId>
-                <artifactId>scala-library</artifactId>
-                <version>${scala-library.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <pluginManagement>
