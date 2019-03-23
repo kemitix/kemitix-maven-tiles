@@ -78,6 +78,7 @@
     #+BEGIN_SRC xml
       <tiles>
         <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:scala-lang:${kemitix-tiles.version}</tiles>
       </tiles>
     #+END_SRC
 
@@ -262,3 +263,24 @@
      Set `pitest.mutation` to a value between 0 and 1 to set the allowed
      mutations to survive the test suite. i.e. 0 = 100% mutations caught, 0.2 =
      80% mutations caught (default is 0)
+
+*** scala-lang
+
+**** Standard library for the Scala Programming Language.
+
+Add the following dependency:
+
+#+begin_example xml
+  <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>${scala-library.version}</version>
+  </dependency>
+#+end_example
+
+The version will be picked up from the dependencyManagement element in
+the tile.
+
+**** scala-maven-plugin for compiling/testing/running/documenting
+
+Add your Scala code in ~src/main/scala~ and tests in ~src/test/scala~.
