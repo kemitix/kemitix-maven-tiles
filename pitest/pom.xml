@@ -17,7 +17,7 @@
     <description>pitest-maven plugins for kemitix-maven-tiles</description>
 
     <properties>
-        <pitest-maven-plugin.version>1.4.6</pitest-maven-plugin.version>
+        <pitest-maven-plugin.version>1.4.7</pitest-maven-plugin.version>
         <pitest-junit5-plugin.version>0.8</pitest-junit5-plugin.version>
     </properties>
 
