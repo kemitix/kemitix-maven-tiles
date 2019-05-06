@@ -5,7 +5,6 @@
                 <groupId>io.repaint.maven</groupId>
                 <artifactId>tiles-maven-plugin</artifactId>
                 <version>@tiles-maven-plugin.version@</version>
-                <extensions>true</extensions>
                 <configuration>
                     <tiles>
                         <tile>net.kemitix.tiles:maven-plugins:@project.version@</tile>
