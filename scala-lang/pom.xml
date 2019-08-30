@@ -17,7 +17,7 @@
     <description>Add support for Scala</description>
 
     <properties>
-        <scala-maven-plugin.version>4.1.0</scala-maven-plugin.version>
+        <scala-maven-plugin.version>4.2.0</scala-maven-plugin.version>
     </properties>
 
     <build>
