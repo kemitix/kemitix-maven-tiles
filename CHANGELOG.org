@@ -5,6 +5,18 @@
   The format is based on [[https://keepachangelog.com/en/1.0.0/][Keep a Changelog]], and this project adheres to
   [[https://semver.org/spec/v2.0.0.html][Semantic Versioning]].
 
+* 2.4.0 - 2020-03-17
+
+** Changed
+
+   - CI/CD changed from Jenkins to GitHub Actions (#167)
+
+** Dependencies
+
+   - Bump pitest-maven from 1.4.10 to 1.5.0 (#166)
+   - Bump spotbugs from 3.1.12 to 4.0.0 (#165)
+   - Bump maven-pmd-plugin from 3.12.0 to 3.13.0 (#164)
+
 * 2.3.0 - 2019-03-23
 
 ** Added
