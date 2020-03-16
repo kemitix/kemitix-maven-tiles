@@ -13,6 +13,7 @@
 
 ** Dependencies
 
+   - Bump kemitix-parent from 5.2.0 to 5.3.0 (#167)
    - Bump pitest-maven from 1.4.10 to 1.5.0 (#166)
    - Bump spotbugs from 3.1.12 to 4.0.0 (#165)
    - Bump maven-pmd-plugin from 3.12.0 to 3.13.0 (#164)
