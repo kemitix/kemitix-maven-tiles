@@ -19,6 +19,10 @@
    - Bump maven-pmd-plugin from 3.12.0 to 3.13.0 (#164)
    - Bump pmd.version from 6.18.0 to 6.22.0 (#170)
    - Bump scala-maven-plugin from 4.2.4 to 4.3.1 (#161)
+   - Bump tiles-maven-plugin from 2.15 to 2.16 (#157)
+   - Bump maven-enforcer-plugin from 3.0.0-M2 to 3.0.0-M3 (#156)
+   - Bump findsecbugs-plugin from 1.9.0 to 1.10.1 (#154)
+   - Bump fb-contrib from 7.4.6 to 7.4.7 (#151)
 
 * 2.3.0 - 2019-03-23
 
