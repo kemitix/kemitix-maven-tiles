@@ -14,6 +14,7 @@
 ** Dependencies
 
    - Bump pitest-maven from 1.4.10 to 1.5.0 (#166)
+   - Bump spotbugs from 3.1.12 to 4.0.0 (#165)
 
 * 2.3.0 - 2019-03-23
 
