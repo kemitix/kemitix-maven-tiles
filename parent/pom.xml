@@ -12,7 +12,7 @@
 
     <artifactId>parent</artifactId>
     <groupId>net.kemitix.tiles</groupId>
-    <version>2.4.0</version>
+    <version>DEV-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>kemitix-maven-tiles-parent</name>
