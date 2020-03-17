@@ -37,3 +37,6 @@ vendor
 *.orig
 *.patch
 *~
+codesigning.asc
+.actrc
+release.json
