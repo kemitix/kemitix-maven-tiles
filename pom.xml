@@ -13,7 +13,7 @@
 
     <artifactId>kemitix-maven-tiles</artifactId>
     <groupId>net.kemitix.tiles</groupId>
-    <version>DEV-SNAPSHOT</version>
+    <version>2.4.0</version>
 
     <packaging>pom</packaging>
 
