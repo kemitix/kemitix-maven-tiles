@@ -1,6 +1,8 @@
 <project>
     <properties>
         <java.version>@java.compiler.version@</java.version>
+        <maven.compiler.source>@java.compiler.version@</maven.compiler.source>
+        <maven.compiler.target>@java.compiler.version@</maven.compiler.target>
         <maven-compiler-plugin.version>@maven-compiler-plugin.version@</maven-compiler-plugin.version>
         <project.build.sourceEncoding>@project.build.sourceEncoding@</project.build.sourceEncoding>
     </properties>
