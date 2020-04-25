@@ -45,6 +45,7 @@
         <module>all-jdk-11</module>
         <module>spotbugs</module>
         <module>scala-lang</module>
+        <module>frontend</module>
     </modules>
 
 </project>
