@@ -1,0 +1,99 @@
+<project>
+    <properties>
+        <node.version>@node.version@</node.version>
+        <yarn.version>@yarn.version@</yarn.version>
+
+        <!-- location of the frontend source files (default: src/main/web) -->
+        <frontend-source>src/main/web</frontend-source>
+        <source-dir>${project.basedir}/${frontend-source}</source-dir>
+
+        <!-- intermediate build directory (default: src/main/web/build) -->
+        <!-- this is determined by node/yarn - we can't override that here -->
+        <build-dir>${source-dir}/build</build-dir>
+
+        <!-- final destination for files within JAR/WAR (default: META-INF/resources) -->
+        <frontend-output>@frontend-output@</frontend-output>
+        <output-dir>${project.build.outputDirectory}/${frontend-output}</output-dir>
+    </properties>
+    <profiles>
+        <profile>
+            <id>frontend-ui</id>
+            <activation>
+              <file>
+                <!-- interpolation of properties not suppored here, so must be static: -->
+                    <exists>src/main/web/package.json</exists>
+                </file>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.eirslett</groupId>
+                        <artifactId>frontend-maven-plugin</artifactId>
+
+                        <configuration>
+                            <nodeVersion>${node.version}</nodeVersion>
+                            <yarnVersion>${yarn.version}</yarnVersion>
+                            <workingDirectory>${source-dir}</workingDirectory>
+                            <installDirectory>${target-dir}</installDirectory>
+                        </configuration>
+
+                        <executions>
+                            <execution>
+                                <id>install-frontend-tools</id>
+                                <goals>
+                                    <goal>install-node-and-yarn</goal>
+                                </goals>
+                            </execution>
+
+                            <execution>
+                                <id>yarn-install</id>
+                                <goals>
+                                    <goal>yarn</goal>
+                                </goals>
+                                <configuration>
+                                    <arguments>install</arguments>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>build-frontend</id>
+                                <goals>
+                                    <goal>yarn</goal>
+                                </goals>
+                                <phase>prepare-package</phase>
+                                <configuration>
+                                    <arguments>build</arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin><!-- /frontend-maven-plugin -->
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-resources-plugin</artifactId>
+
+                        <executions>
+                            <execution>
+                                <id>position-frontend-build</id>
+                                <goals>
+                                    <goal>copy-resources</goal>
+                                </goals>
+                                <phase>prepare-package</phase>
+                                <configuration>
+                                    <outputDirectory>${output-dir}
+                                    </outputDirectory>
+                                    <resources>
+                                        <resource>
+                                            <directory>${build-dir}</directory>
+                                            <filtering>false</filtering>
+                                        </resource>
+                                    </resources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

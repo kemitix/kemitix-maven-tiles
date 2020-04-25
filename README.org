@@ -78,7 +78,8 @@
     #+BEGIN_SRC xml
       <tiles>
         <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:scala-lang:${kemitix-tiles.version}</tiles>
+        <tile>net.kemitix.tiles:scala-lang:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
       </tiles>
     #+END_SRC
 
@@ -284,3 +285,16 @@ the tile.
 **** scala-maven-plugin for compiling/testing/running/documenting
 
 Add your Scala code in ~src/main/scala~ and tests in ~src/test/scala~.
+
+*** frontend
+
+Configures the `frontend-maven-plugin` to install `node` and `yarn` then to run
+`yarn install` and `yarn build` during the maven build lifecycle.
+
+It expects to find the source files in `src/main/web` and installs
+the packaged result into `META-INF/resources` within the jar or war file.
+The destination location can be customised by setting the following property:
+
+- `frontend-output` - default: `META-INF/resources`
+
+The `frontend-maven-plugin` will not run if the file `src/main/web/package.json` is not present.
