@@ -5,7 +5,7 @@
     <parent>
         <artifactId>parent</artifactId>
         <groupId>net.kemitix.tiles</groupId>
-        <version>2.6.0</version>
+        <version>DEV-SNAPSHOT</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -19,8 +19,8 @@
     <properties>
         <frontend-maven-plugin.version>1.10.0</frontend-maven-plugin.version>
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
-        <node.version>v12.16.2</node.version>
-        <yarn.version>v1.22.4</yarn.version>
+        <node.version>v14.0.0</node.version>
+        <npm.version>6.14.4</npm.version>
 
         <tiles-maven-plugin.version>2.16</tiles-maven-plugin.version>
         <pitest.skip>true</pitest.skip>

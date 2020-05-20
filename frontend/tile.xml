@@ -1,7 +1,7 @@
 <project>
     <properties>
         <node.version>@node.version@</node.version>
-        <yarn.version>@yarn.version@</yarn.version>
+        <npm.version>@npm.version@</npm.version>
 
         <!-- location of the frontend source files (default: src/main/web) -->
         <frontend-source>src/main/web</frontend-source>
@@ -19,8 +19,8 @@
         <profile>
             <id>frontend-ui</id>
             <activation>
-              <file>
-                <!-- interpolation of properties not suppored here, so must be static: -->
+                <file>
+                    <!-- interpolation of properties not suppored here, so must be static: -->
                     <exists>src/main/web/package.json</exists>
                 </file>
             </activation>
@@ -32,7 +32,7 @@
 
                         <configuration>
                             <nodeVersion>${node.version}</nodeVersion>
-                            <yarnVersion>${yarn.version}</yarnVersion>
+                            <npmVersion>${npm.version}</npmVersion>
                             <workingDirectory>${source-dir}</workingDirectory>
                             <installDirectory>${target-dir}</installDirectory>
                         </configuration>
@@ -41,14 +41,14 @@
                             <execution>
                                 <id>install-frontend-tools</id>
                                 <goals>
-                                    <goal>install-node-and-yarn</goal>
+                                    <goal>install-node-and-npm</goal>
                                 </goals>
                             </execution>
 
                             <execution>
-                                <id>yarn-install</id>
+                                <id>npm-install</id>
                                 <goals>
-                                    <goal>yarn</goal>
+                                    <goal>npm</goal>
                                 </goals>
                                 <configuration>
                                     <arguments>install</arguments>
@@ -58,11 +58,11 @@
                             <execution>
                                 <id>build-frontend</id>
                                 <goals>
-                                    <goal>yarn</goal>
+                                    <goal>npm</goal>
                                 </goals>
                                 <phase>prepare-package</phase>
                                 <configuration>
-                                    <arguments>build</arguments>
+                                    <arguments>run-script build</arguments>
                                 </configuration>
                             </execution>
                         </executions>
@@ -71,7 +71,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-resources-plugin</artifactId>
-
                         <executions>
                             <execution>
                                 <id>position-frontend-build</id>
