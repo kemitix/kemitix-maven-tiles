@@ -5,6 +5,21 @@
   The format is based on [[https://keepachangelog.com/en/1.0.0/][Keep a Changelog]], and this project adheres to
   [[https://semver.org/spec/v2.0.0.html][Semantic Versioning]].
 
+* 2.7.0 - 2020-05-20
+
+** Changes
+
+ * cc65b07 Frontend npm (#188)
+ * a2d3a45 Post Release 2.6.0 (#182)
+
+** Dependencies
+
+ * 64cddc3 Bump scala-maven-plugin from 4.3.1 to 4.4.0 (#187)
+ * aae4eb6 Bump spotbugs from 4.0.2 to 4.0.3 (#186)
+ * 9f05038 Bump pitest-maven from 1.5.1 to 1.5.2 (#185)
+ * f14f067 Bump frontend-maven-plugin from 1.9.1 to 1.10.0 (#184)
+ * 597ead6 Bump pmd.version from 6.22.0 to 6.23.0 (#183)
+
 * 2.6.0 - 2020-04-25
 
 ** Added
