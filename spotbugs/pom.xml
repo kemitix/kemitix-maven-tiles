@@ -17,7 +17,7 @@
     <description>spotbugs-maven-plugin for kemitix-maven-tiles</description>
 
     <properties>
-        <spotbugs.version>4.1.1</spotbugs.version>
+        <spotbugs.version>4.1.2</spotbugs.version>
         <spotbugs-maven-plugin.version>4.0.4</spotbugs-maven-plugin.version>
         <findsecbugs-plugin.version>1.10.1</findsecbugs-plugin.version>
         <fb-contrib.version>7.4.7</fb-contrib.version>
