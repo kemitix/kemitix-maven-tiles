@@ -64,38 +64,30 @@ For Java 11 applications you can use the `all-jdk-11` tile:
 
 ### individual tiles
 
-The `all` tile gives you the same as:
+The available tiles are:
 
 ```xml
       <tiles>
         <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-14:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-15:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-lts:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-latest:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-next:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:scala-lang:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
       </tiles>
 ```
-
-The `all-jdk-11` tile includes the same tiles as `all` excluding `huntbugs`
-and `pitest` and replacing `compiler-jdk-8` with `compiler-jdk-11`.
-
-The following tile is available, but is not included in either the `all` or
-`all-jdk-11` tiles:
-
-```xml
-<tiles>
-    <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
-    <tile>net.kemitix.tiles:scala-lang:${kemitix-tiles.version}</tile>
-    <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
-</tiles>
-```
-
-For Java 11 use the individual tiles, replacing the `compile-jdk-8` with
-`compiler-jdk-11`.
 
 ## Tiles
 
@@ -132,12 +124,11 @@ Default is 3.5.4.
 mvn validate -Drequired-maven.version=3.3.9
 ```
 
-### Compiler JDK 8 and 11 Tiles
+### Compiler JDK Tiles
 
-Select either the `compiler-jdk-8` or `compiler-jdk-11` to select your Java
-compiler.
+Select the `compiler-jdk-*` tile to select your Java compiler.
 
-Both tiles configure the 
+All `compiler-jdk-*` tiles configure the 
 [maven-compiler-plugin](https://maven.apache.org/plugins/maven-compiler-plugin/)
 with the following options:
 
