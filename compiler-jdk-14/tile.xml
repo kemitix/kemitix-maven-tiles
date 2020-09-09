@@ -1,0 +1,28 @@
+<project>
+    <properties>
+        <java.version>@java.compiler.version@</java.version>
+        <maven.compiler.source>@java.compiler.version@</maven.compiler.source>
+        <maven.compiler.target>@java.compiler.version@</maven.compiler.target>
+        <maven-compiler-plugin.version>@maven-compiler-plugin.version@</maven-compiler-plugin.version>
+        <project.build.sourceEncoding>@project.build.sourceEncoding@</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-Xlint:unchecked</arg>
+                    </compilerArgs>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin><!-- maven-compiler-plugin -->
+        </plugins>
+    </build>
+</project>

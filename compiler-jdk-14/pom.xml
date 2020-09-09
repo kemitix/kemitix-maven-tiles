@@ -10,24 +10,25 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>coverage</artifactId>
+    <artifactId>compiler-jdk-14</artifactId>
     <packaging>tile</packaging>
 
-    <name>kemitix-maven-tiles-coverage</name>
-    <description>maven-jacoco-plugin for kemitix-maven-tiles</description>
+    <name>kemitix-maven-tiles-compiler-jdk-14</name>
+    <description>maven-compiler-plugin for kemitix-maven-tiles</description>
 
     <properties>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
+        <java.compiler.version>14</java.compiler.version>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>${jacoco-maven-plugin.version}</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
