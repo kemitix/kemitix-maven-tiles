@@ -44,6 +44,8 @@ Given:
 
 ### all-in-one for Java 8
 
+**DEPRECATED**
+
 For Java 8 applications you can use the `all` tile:
 
 ```xml
@@ -53,6 +55,8 @@ For Java 8 applications you can use the `all` tile:
 ```
 
 ### all-in-one for Java 11
+
+**DEPRECATED**
 
 For Java 11 applications you can use the `all-jdk-11` tile:
 
@@ -71,9 +75,6 @@ The available tiles are:
         <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-14:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-15:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-lts:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-latest:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-next:${kemitix-tiles.version}</tile>
@@ -86,6 +87,12 @@ The available tiles are:
         <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:scala-lang:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
+
+        <!-- deprecated -->
+        <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-14:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:compiler-jdk-15:${kemitix-tiles.version}</tile>
+
       </tiles>
 ```
 
@@ -127,6 +134,8 @@ mvn validate -Drequired-maven.version=3.3.9
 ### Compiler JDK Tiles
 
 Select the `compiler-jdk-*` tile to select your Java compiler.
+
+Note that the numeric tiles are **deprecated** (except 8).
 
 All `compiler-jdk-*` tiles configure the 
 [maven-compiler-plugin](https://maven.apache.org/plugins/maven-compiler-plugin/)
