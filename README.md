@@ -97,14 +97,6 @@ The following tile is available, but is not included in either the `all` or
 For Java 11 use the individual tiles, replacing the `compile-jdk-8` with
 `compiler-jdk-11`.
 
-## Use with IntelliJ IDE
-
-The IntelliJ IDE still bundles Maven 3.3.9. In order to avoid the `enforcer`
-tile breaking you need to either tell IntelliJ not to use the bundled copy
-of Maven (e.g. `[shift]+[shift]maven home`), or specify the
-`required-maven.version` property in the IntelliJ run configurations (e.g.
-add `-Drequired-maven.version=3.3.9` to the Command line).
-    
 ## Tiles
 
 ### maven-plugins
