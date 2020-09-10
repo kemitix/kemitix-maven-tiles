@@ -21,8 +21,8 @@ Given:
 ```xml
 <project>
     <properties>
-        <tiles-maven-plugin.version>2.13</tiles-maven-plugin.version>
-        <kemitix-tiles.version>2.9.0</kemitix-tiles.version>
+        <tiles-maven-plugin.version>${LATEST-PLUGIN-VERSION}</tiles-maven-plugin.version>
+        <kemitix-tiles.version>${LATEST-TILES-VERSION}</kemitix-tiles.version>
     </properties>
     <build>
         <plugins>
