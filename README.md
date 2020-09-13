@@ -14,6 +14,9 @@ https://oss.sonatype.org/content/repositories/releases/net/kemitix/tiles/)
 https://img.shields.io/maven-central/v/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge)](
 https://search.maven.org/search?q=g:net.kemitix.tiles)
 
+With `tiles-maven-plugin`:
+![GitHub tag (semver)](https://img.shields.io/github/v/tag/repaint-io/maven-tiles?sort=semver&style=for-the-badge)
+
 ## Usage
 
 Given:
