@@ -14,6 +14,9 @@ https://oss.sonatype.org/content/repositories/releases/net/kemitix/tiles/)
 https://img.shields.io/maven-central/v/net.kemitix.tiles/kemitix-maven-tiles.svg?style=for-the-badge)](
 https://search.maven.org/search?q=g:net.kemitix.tiles)
 
+With `tiles-maven-plugin`:
+![GitHub tag (semver)](https://img.shields.io/github/v/tag/repaint-io/maven-tiles?sort=semver&style=for-the-badge)
+
 ## Usage
 
 Given:
@@ -21,8 +24,8 @@ Given:
 ```xml
 <project>
     <properties>
-        <tiles-maven-plugin.version>2.13</tiles-maven-plugin.version>
-        <kemitix-tiles.version>2.9.0</kemitix-tiles.version>
+        <tiles-maven-plugin.version>${LATEST-PLUGIN-VERSION}</tiles-maven-plugin.version>
+        <kemitix-tiles.version>${LATEST-TILES-VERSION}</kemitix-tiles.version>
     </properties>
     <build>
         <plugins>
@@ -73,7 +76,6 @@ The available tiles are:
 ```xml
       <tiles>
         <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-lts:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-latest:${kemitix-tiles.version}</tile>
@@ -92,6 +94,7 @@ The available tiles are:
         <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-14:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:compiler-jdk-15:${kemitix-tiles.version}</tile>
+        <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
 
       </tiles>
 ```
@@ -120,6 +123,8 @@ plugin. It is configured to produce the `dependency-updates-report`,
 `plugin-updates-report` and the `property-updates-report`
 
 ### enforcer
+
+**Deprecated**
 
 Provides the `maven-enforcer-plugin`, performing the `display-info` and
 `enforce` goals during the `validate` phase.

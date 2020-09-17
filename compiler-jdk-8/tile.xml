@@ -5,9 +5,32 @@
         <maven.compiler.target>@java.compiler.version@</maven.compiler.target>
         <maven-compiler-plugin.version>@maven-compiler-plugin.version@</maven-compiler-plugin.version>
         <project.build.sourceEncoding>@project.build.sourceEncoding@</project.build.sourceEncoding>
+        <maven-enforcer-plugin.version>@maven-enforcer-plugin.version@</maven-enforcer-plugin.version>
     </properties>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${maven-enforcer-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>enforce-maven</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>display-info</goal>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <rules>
+                        <requireJavaVersion>
+                            <version>${java.version}</version>
+                        </requireJavaVersion>
+                    </rules>
+                </configuration>
+            </plugin><!-- maven-enforcer-plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
