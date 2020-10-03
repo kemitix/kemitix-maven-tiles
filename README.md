@@ -82,12 +82,10 @@ The available tiles are:
         <tile>net.kemitix.tiles:compiler-jdk-next:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:digraph:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:scala-lang:${kemitix-tiles.version}</tile>
         <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
 
         <!-- deprecated -->
@@ -221,18 +219,6 @@ Not included in the `all` tile.
 Unlike the `pmd` tile, if there are any violations of the ruleset then the
 build will fail.
 
-### digraph
-
-**Deprecated**
-
-The
-[Digraph Maven Plugin](https://github.com/kemitix/digraph-dependency-maven-plugin/)
-creates a graphviz diagram of the package dependencies within the source code
-during the `verify` phase.
-
-Set the property `digraph-dependency.basePackage` to the base of the project to
-be graphed. The default value is `net.kemitix`.
-
 ### testing
 
 #### Maven Surefire Plugin
@@ -293,27 +279,6 @@ of uncovered code. i.e. 0 = 100% code coverage, 0.2 = 80% code coverage
 Set `pitest.mutation` to a value between 0 and 1 to set the allowed
 mutations to survive the test suite. i.e. 0 = 100% mutations caught, 0.2 =
 80% mutations caught (default is 0)
-
-### scala-lang
-
-#### Standard library for the Scala Programming Language.
-
-Add the following dependency:
-
-```xml
-<dependency>
-    <groupId>org.scala-lang</groupId>
-    <artifactId>scala-library</artifactId>
-    <version>${scala-library.version}</version>
-</dependency>
-```
-
-The version will be picked up from the dependencyManagement element in
-the tile.
-
-#### scala-maven-plugin for compiling/testing/running/documenting
-
-Add your Scala code in ~src/main/scala~ and tests in ~src/test/scala~.
 
 ### frontend
 
