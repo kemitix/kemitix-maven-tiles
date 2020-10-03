@@ -35,66 +35,31 @@ Given:
                 <version>${tiles-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
-                <tiles>
-                    <!-- see below -->
-                </tiles>
+                  <tiles>
+                    <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:compiler-jdk-lts:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:compiler-jdk-latest:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:compiler-jdk-next:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
+
+                    <!-- deprecated -->
+                    <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:compiler-jdk-14:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:compiler-jdk-15:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
+                  </tiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
-```
-
-### all-in-one for Java 8
-
-**DEPRECATED**
-
-For Java 8 applications you can use the `all` tile:
-
-```xml
-<tiles>
-    <tile>net.kemitix.tiles:all:${kemitix-tiles.version}</tile>
-</tiles>
-```
-
-### all-in-one for Java 11
-
-**DEPRECATED**
-
-For Java 11 applications you can use the `all-jdk-11` tile:
-
-```xml
-<tiles>
-    <tile>net.kemitix.tiles:all-jdk-11:${kemitix-tiles.version}</tile>
-</tiles>
-```
-
-### individual tiles
-
-The available tiles are:
-
-```xml
-      <tiles>
-        <tile>net.kemitix.tiles:maven-plugins:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-8:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-lts:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-latest:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-next:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
-
-        <!-- deprecated -->
-        <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-14:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:compiler-jdk-15:${kemitix-tiles.version}</tile>
-        <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
-
-      </tiles>
 ```
 
 ## Tiles
