@@ -31,9 +31,6 @@
     <modules>
         <module>parent</module>
         <module>compiler-jdk-8</module>
-        <module>compiler-jdk-11</module>
-        <module>compiler-jdk-14</module>
-        <module>compiler-jdk-15</module>
         <module>compiler-jdk-lts</module>
         <module>compiler-jdk-latest</module>
         <module>compiler-jdk-next</module>
@@ -42,7 +39,6 @@
         <module>testing</module>
         <module>maven-plugins</module>
         <module>pitest</module>
-        <module>huntbugs</module>
         <module>pmd</module>
         <module>pmd-strict</module>
         <module>spotbugs</module>

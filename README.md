@@ -41,19 +41,13 @@ Given:
                     <tile>net.kemitix.tiles:compiler-jdk-lts:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:compiler-jdk-latest:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:compiler-jdk-next:${kemitix-tiles.version}</tile>
-                    <tile>net.kemitix.tiles:huntbugs:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:pmd:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:testing:${kemitix-tiles.version}</tile>
+                    <tile>net.kemitix.tiles:spotbugs:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:coverage:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:pitest:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:pmd-strict:${kemitix-tiles.version}</tile>
                     <tile>net.kemitix.tiles:frontend:${kemitix-tiles.version}</tile>
-
-                    <!-- deprecated -->
-                    <tile>net.kemitix.tiles:compiler-jdk-11:${kemitix-tiles.version}</tile>
-                    <tile>net.kemitix.tiles:compiler-jdk-14:${kemitix-tiles.version}</tile>
-                    <tile>net.kemitix.tiles:compiler-jdk-15:${kemitix-tiles.version}</tile>
-                    <tile>net.kemitix.tiles:enforcer:${kemitix-tiles.version}</tile>
                   </tiles>
                 </configuration>
             </plugin>
@@ -85,25 +79,16 @@ Adds an updated version of the `org.codehaus.mojo:versions-maven-plugin`
 plugin. It is configured to produce the `dependency-updates-report`,
 `plugin-updates-report` and the `property-updates-report`
 
-### enforcer
-
-**Deprecated**
-
-Provides the `maven-enforcer-plugin`, performing the `display-info` and
-`enforce` goals during the `validate` phase.
-
-Required Maven Version is set by the `required-maven.version` property.
-Default is 3.5.4.
-
-```shell
-mvn validate -Drequired-maven.version=3.3.9
-```
-
 ### Compiler JDK Tiles
 
 Select the `compiler-jdk-*` tile to select your Java compiler.
 
-Note that the numeric tiles are **deprecated** (except 8).
+|Tile|JDK
+|---|---
+|8|8
+|lts|11
+|latest|15
+|next|16
 
 All `compiler-jdk-*` tiles configure the 
 [maven-compiler-plugin](https://maven.apache.org/plugins/maven-compiler-plugin/)
@@ -128,30 +113,6 @@ It includes the
 and
 [fb-contrib](https://github.com/mebigfatguy/fb-contrib)
 spotbugs plugins.
-
-# huntbugs
-
-**Deprecated - will be remove in `kemitix-maven-tiles 3.x.x`**
-
-The plugin in this tile are only enabled when using a 1.8 JDK.
-
-The
-[Huntbugs Maven Plugin](https://github.com/amaembo/huntbugs)
-performs a static analysis of the compiled bytecode for common bug patterns
-during the `verify` phase.
-
-Trying to use the 0.0.11 version of the Huntbugs Maven Plugin with JDK 9 will
-result in the error:
-
-```
-[ERROR] Failed to execute goal one.util:huntbugs-maven-plugin:0.0.11:huntbugs (default-cli) on project foo:
-Execution default-cli of goal one.util:huntbugs-maven-plugin:0.0.11:huntbugs failed:
-A required class was missing while executing one.util:huntbugs-maven-plugin:0.0.11:huntbugs:
-sun/misc/URLClassPath
-```
-
-For this reason, and that the module appears to have been abandoned, the tile 
-has been deprecated and will be removed soon.
 
 ### PMD Tiles
 
