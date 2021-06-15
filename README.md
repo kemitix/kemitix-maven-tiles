@@ -87,8 +87,8 @@ Select the `compiler-jdk-*` tile to select your Java compiler.
 |---|---
 |8|8
 |lts|11
-|latest|15
-|next|16
+|latest|16
+|next|17
 
 All `compiler-jdk-*` tiles configure the 
 [maven-compiler-plugin](https://maven.apache.org/plugins/maven-compiler-plugin/)
