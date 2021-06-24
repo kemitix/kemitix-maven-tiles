@@ -9,3 +9,7 @@ updates:
   - dependency-name: com.mebigfatguy.fb-contrib:fb-contrib
     versions:
     - "< 7.4.4, > 7.4.3.sb"
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: daily
