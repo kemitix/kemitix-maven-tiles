@@ -27,6 +27,14 @@ Given:
         <tiles-maven-plugin.version>${LATEST-PLUGIN-VERSION}</tiles-maven-plugin.version>
         <kemitix-tiles.version>${LATEST-TILES-VERSION}</kemitix-tiles.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <artifactId>version-tracker</artifactId>
+            <groupId>net.kemitix.tiles</groupId>
+            <version>${kemitix-tiles.version}</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -55,6 +63,13 @@ Given:
     </build>
 </project>
 ```
+
+## Version Tracker
+
+The module `version-tracker` is provided to allow version monitors, such as dependabot, to see that this is a dependency upon this project, and provide a notification when an upgrade is available.
+Tiles are not recognised by such tools, so they don't provide notifications for them.
+
+The module itself is empty and is simply a marker to show that this is indeed a dependency upon this project.
 
 ## Tiles
 
