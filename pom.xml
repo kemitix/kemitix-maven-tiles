@@ -42,6 +42,7 @@
         <module>pmd-strict</module>
         <module>spotbugs</module>
         <module>frontend</module>
+        <module>version-tracker</module>
     </modules>
 
 </project>
