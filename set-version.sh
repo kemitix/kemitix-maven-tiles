@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd `dirname $0`
-PROJECT=`basename $PWD`
+PROJECT=kemitix-maven-tiles
 
 if test $# != 1
 then
