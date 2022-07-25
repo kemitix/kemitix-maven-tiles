@@ -19,7 +19,7 @@
     <description>Parent POM for kemitix-maven-tiles</description>
 
     <properties>
-        <tiles-maven-plugin.version>2.24</tiles-maven-plugin.version>
+        <tiles-maven-plugin.version>2.29</tiles-maven-plugin.version>
     </properties>
 
     <build>
