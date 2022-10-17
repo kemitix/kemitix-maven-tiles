@@ -22,7 +22,7 @@
         <node.version>v14.0.0</node.version>
         <npm.version>6.14.4</npm.version>
 
-        <tiles-maven-plugin.version>2.24</tiles-maven-plugin.version>
+        <tiles-maven-plugin.version>2.31</tiles-maven-plugin.version>
         <pitest.skip>true</pitest.skip>
 
         <frontend-output>META-INF/resources</frontend-output>
